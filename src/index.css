@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FAF7F2; /* page bg — intentionally same as cream */
+  --color-cream: #FAF7F2; /* text/fill token — intentionally same as background */
+  --color-warm-white: #FFFDF9;
+  --color-terracotta: #C4622D;
+  --color-terracotta-dark: #A8512A;
+  --color-sage: #6B8F6E;
+  --color-espresso: #2C2418;
+  --color-bark: #3D3226;
+  --color-wood: #8B7355;
+  --font-heading: 'Outfit', sans-serif;
+  --font-drama: 'Playfair Display', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Noise overlay — fixed, pointer-events-none, never on scrolling containers */
+.noise-overlay::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Magnetic button — hover fill from bottom */
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.btn-magnetic:hover {
+  transform: scale(1.02);
+}
+.btn-magnetic:active {
+  transform: scale(0.98);
+}
+.btn-magnetic .btn-bg {
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.btn-magnetic:hover .btn-bg {
+  transform: translateY(0);
+}
+
+/* Link hover micro-lift */
+.link-lift {
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.link-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Menu item hover */
+.menu-item {
+  transition: background-color 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.menu-item:hover {
+  background-color: rgba(196, 98, 45, 0.04);
+}
+
+/* Hero gradient — warm espresso fade from bottom */
+.hero-gradient {
+  background: linear-gradient(
+    to top,
+    rgba(44, 36, 24, 0.92) 0%,
+    rgba(44, 36, 24, 0.55) 40%,
+    rgba(44, 36, 24, 0.15) 70%,
+    rgba(44, 36, 24, 0.05) 100%
+  );
+}
+
+/* Scroll-driven fade-in (CSS-only for elements without GSAP) */
+.fade-up {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.8s cubic-bezier(0.32, 0.72, 0, 1),
+              transform 0.8s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* scroll-behavior: auto — required for GSAP ScrollTrigger compatibility */
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-heading);
+  background-color: var(--color-background);
+  color: var(--color-espresso);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-wood);
+  border-radius: 3px;
+}
+
+/* Parzenica decorative divider */
+.parzenica-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.parzenica-divider::before,
+.parzenica-divider::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+/* Menu item staggered fade-in */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
