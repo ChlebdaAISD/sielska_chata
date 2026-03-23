@@ -141,3 +141,29 @@ body {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* === WERSJA 2: Leśna zieleń === */
+html[data-theme="v2"] {
+  --color-background: #F3F7F3;
+  --color-cream: #F3F7F3;
+  --color-warm-white: #F8FBF8;
+  --color-terracotta: #3D6B47;
+  --color-terracotta-dark: #2E5238;
+  --color-espresso: #1C2B1E;
+  --color-bark: #253228;
+  --color-wood: #5B7A60;
+}
+
+html[data-theme="v2"] .hero-gradient {
+  background: linear-gradient(
+    to top,
+    rgba(28, 43, 30, 0.92) 0%,
+    rgba(28, 43, 30, 0.55) 40%,
+    rgba(28, 43, 30, 0.15) 70%,
+    rgba(28, 43, 30, 0.05) 100%
+  );
+}
+
+html[data-theme="v2"] .menu-item:hover {
+  background-color: rgba(61, 107, 71, 0.04);
+}

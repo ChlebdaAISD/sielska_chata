@@ -866,8 +866,7 @@ function Footer() {
   return (
     <footer className="bg-espresso px-6 md:px-16 lg:px-24 pt-16 pb-10">
       <MountainSilhouette
-        className="w-full h-12 md:h-16 -mt-16 mb-8 opacity-30"
-        color="#3D3226"
+        className="w-full h-12 md:h-16 -mt-16 mb-8 opacity-30 text-bark"
       />
       <div className="max-w-[1400px] mx-auto">
         <div className="grid md:grid-cols-12 gap-10 mb-14">
@@ -932,6 +931,13 @@ function Footer() {
 
 // ─── APP ─────────────────────────────────────────────────
 function App() {
+  useEffect(() => {
+    if (window.location.pathname.startsWith('/wersja2')) {
+      document.documentElement.setAttribute('data-theme', 'v2')
+    }
+    return () => document.documentElement.removeAttribute('data-theme')
+  }, [])
+
   return (
     <div className="noise-overlay">
       <Navbar />
