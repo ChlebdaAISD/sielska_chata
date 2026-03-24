@@ -1,0 +1,683 @@
+{
+  "restaurant": "Sielska Chata",
+  "categories": [
+    {
+      "id": "przystawki",
+      "name": "Przystawki",
+      "items": [
+        {
+          "id": "przystawki-1",
+          "name": "Grillowany oscypek w pikantnym sosie winno-miodowym",
+          "description": "5 szt.",
+          "price": 28
+        },
+        {
+          "id": "przystawki-2",
+          "name": "Kaszanka z patelni z prażoną cebulą i pajdą chleba",
+          "description": "sos śliwkowy, 150 g",
+          "price": 27
+        },
+        {
+          "id": "przystawki-3",
+          "name": "Pieczone ślimaki na maśle czosnkowym",
+          "description": "8 szt.",
+          "price": 63
+        },
+        {
+          "id": "przystawki-4",
+          "name": "Śledź z cebulką i kiszonym ogórkiem",
+          "description": "120 g",
+          "price": 27
+        }
+      ]
+    },
+    {
+      "id": "zupy",
+      "name": "Zupy",
+      "items": [
+        {
+          "id": "zupy-1",
+          "name": "Rosół z drobiu i kaczki z makaronem",
+          "description": "300 ml",
+          "price": 17
+        },
+        {
+          "id": "zupy-2",
+          "name": "Czosnkowa z grzankami i tartym oscypkiem",
+          "description": "300 ml",
+          "price": 19
+        },
+        {
+          "id": "zupy-3",
+          "name": "Zupa rybna z makaronem, twarogiem i wędzoną słoniną",
+          "description": "300 ml",
+          "price": 26
+        },
+        {
+          "id": "zupy-4",
+          "name": "Flaki wołowe z warzywami",
+          "description": "400 ml",
+          "price": 26
+        },
+        {
+          "id": "zupy-5",
+          "name": "Kwaśnica z ziemniakami i wędzonymi żeberkami",
+          "description": "300 ml",
+          "price": 27
+        },
+        {
+          "id": "zupy-6",
+          "name": "Krem z pomidorów i soczewicy z prażonymi ziarnami",
+          "description": "300 ml",
+          "price": 19
+        },
+        {
+          "id": "zupy-7",
+          "name": "Żurek z jajkiem i kiełbasą",
+          "description": "350 ml",
+          "price": 24
+        }
+      ]
+    },
+    {
+      "id": "dania",
+      "name": "Dania",
+      "items": [
+        {
+          "id": "dania-1",
+          "name": "Kotlet sielski XXL",
+          "description": "ziemniaki, kapusta zasmażana — 300 g",
+          "price": 48,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-2",
+          "name": "Żeberka pieczone w sosie BBQ",
+          "description": "ziemniaki smażone, zestaw surówek — 500 g",
+          "price": 48,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-3",
+          "name": "Stek wołowy z pikantnym pomidorem",
+          "description": "słonecznik w miodzie, ziemniaczane talarki — 250 g",
+          "price": 125,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-4",
+          "name": "Pierś z kaczki z ryżem i warzywami",
+          "description": "200 g",
+          "price": 48,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-5",
+          "name": "Pierś z kurczaka z ryżem i warzywami",
+          "description": "200 g",
+          "price": 48,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-6",
+          "name": "Placki po zbójnicku z gulaszem wołowym",
+          "description": "zestaw surówek — 400 g",
+          "price": 48,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-7",
+          "name": "Golonka pieczona w piwie",
+          "description": "kapusta zasmażana, ziemniaki, chrzan, musztarda — 400 g",
+          "price": 59,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-8",
+          "name": "Gulasz wołowy z fasolką szparagową i pajdą chleba",
+          "description": "300 ml",
+          "price": 59,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-9",
+          "name": "Pieczona noga z kaczki ze smażonymi kopytkami",
+          "description": "buraczki z jabłkiem — 300 g",
+          "price": 56,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-10",
+          "name": "Kotlet z jagnięciny z masłem czosnkowym",
+          "description": "ziemniaki smażone, ogórek kiszony — 200 g",
+          "price": 86,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-11",
+          "name": "Szaszłyk jagnięcy ze słoniną",
+          "description": "ziemniaki smażone, zestaw surówek — 200 g",
+          "price": 79,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "dania-12",
+          "name": "Makaron z szarpaną wołowiną i pomidorami",
+          "description": null,
+          "price": 49,
+          "subcategory": "Dania główne"
+        },
+        {
+          "id": "ryby-1",
+          "name": "Pstrąg pieczony z ziołami w maśle czosnkowym",
+          "description": "ziemniaki z chrzanem, bukiet sałat — 300 g",
+          "price": 54,
+          "subcategory": "Dania rybne"
+        },
+        {
+          "id": "ryby-2",
+          "name": "Filet z sandacza w sosie borowikowym",
+          "description": "ziemniaki puree, mix sałat z maślanką — 200 g",
+          "price": 58,
+          "subcategory": "Dania rybne"
+        },
+        {
+          "id": "ryby-3",
+          "name": "Krewetki z ryżem i warzywami",
+          "description": "sos sojowy, sos słodkie chilli — 8 szt.",
+          "price": 68,
+          "subcategory": "Dania rybne"
+        },
+        {
+          "id": "pierogi-1",
+          "name": "Pierogi ruskie XXL",
+          "description": "8 szt.",
+          "price": 26,
+          "subcategory": "Pierogi / Makarony"
+        },
+        {
+          "id": "pierogi-2",
+          "name": "Pierogi z mięsem XXL",
+          "description": "8 szt.",
+          "price": 27,
+          "subcategory": "Pierogi / Makarony"
+        },
+        {
+          "id": "pierogi-3",
+          "name": "Makaron ze szpinakiem, suszonym pomidorem i tartym oscypkiem",
+          "description": null,
+          "price": 39,
+          "subcategory": "Pierogi / Makarony"
+        }
+      ]
+    },
+    {
+      "id": "salatki",
+      "name": "Sałatki",
+      "items": [
+        {
+          "id": "salatki-1",
+          "name": "Sałatka z grillowanym kurczakiem",
+          "description": "mix sałat, kiszony ogórek, pomidor, czerwona cebula, vinegret, grzanki, arbuz — 250 g",
+          "price": 39
+        },
+        {
+          "id": "salatki-2",
+          "name": "Sałatka z owocami morza",
+          "description": "mix sałat, owoce morza 120 g, vinegret, salsa-mango, oliwki, pieczywo — 250 g",
+          "price": 42
+        }
+      ]
+    },
+    {
+      "id": "dla-dzieci",
+      "name": "Dla dzieci",
+      "items": [
+        {
+          "id": "dzieci-1",
+          "name": "Rosół z makaronem",
+          "description": "200 ml",
+          "price": 15
+        },
+        {
+          "id": "dzieci-2",
+          "name": "Pomidorowa z makaronem",
+          "description": "200 ml",
+          "price": 15
+        },
+        {
+          "id": "dzieci-3",
+          "name": "Złociste pasemka z kurczaka",
+          "description": "frytki, surówka z marchewki — 3 szt.",
+          "price": 24
+        },
+        {
+          "id": "dzieci-4",
+          "name": "Klopsiki w sosie własnym",
+          "description": "ziemniaki puree, surówka z marchwy — 7 szt.",
+          "price": 24
+        }
+      ]
+    },
+    {
+      "id": "desery",
+      "name": "Desery",
+      "items": [
+        {
+          "id": "desery-1",
+          "name": "Naleśniki z serem lub kremem czekoladowym",
+          "description": "bita śmietana — 2 szt.",
+          "price": 21
+        },
+        {
+          "id": "desery-2",
+          "name": "Sernik z wiśniami na gorąco",
+          "description": null,
+          "price": 25
+        },
+        {
+          "id": "desery-3",
+          "name": "Szarlotka z bitą śmietaną i gałką lodów",
+          "description": null,
+          "price": 22
+        },
+        {
+          "id": "desery-4",
+          "name": "Puchar lodowy",
+          "description": "3 gałki lodów, bita śmietana, owoce, polewa",
+          "price": 24
+        }
+      ]
+    },
+    {
+      "id": "dodatki",
+      "name": "Dodatki",
+      "items": [
+        {
+          "id": "dodatki-1",
+          "name": "Ryż",
+          "description": "150 g",
+          "price": 10
+        },
+        {
+          "id": "dodatki-2",
+          "name": "Frytki",
+          "description": "150 g",
+          "price": 14
+        },
+        {
+          "id": "dodatki-3",
+          "name": "Ziemniaki z wody",
+          "description": "200 g",
+          "price": 10
+        },
+        {
+          "id": "dodatki-4",
+          "name": "Ziemniaki zapiekane",
+          "description": "250 g",
+          "price": 14
+        },
+        {
+          "id": "dodatki-5",
+          "name": "Warzywa gotowane",
+          "description": "200 g",
+          "price": 14
+        },
+        {
+          "id": "dodatki-6",
+          "name": "Zestaw surówek",
+          "description": null,
+          "price": 14
+        },
+        {
+          "id": "dodatki-7",
+          "name": "Pieczywo",
+          "description": null,
+          "price": 4
+        },
+        {
+          "id": "dodatki-8",
+          "name": "Keczup lub musztarda",
+          "description": null,
+          "price": 4
+        },
+        {
+          "id": "dodatki-9",
+          "name": "Chrzan",
+          "description": null,
+          "price": 7
+        }
+      ]
+    },
+    {
+      "id": "napoje",
+      "name": "Napoje",
+      "items": [
+        {
+          "id": "hot-1",
+          "name": "Kawa czarna",
+          "description": null,
+          "price": 13,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-2",
+          "name": "Kawa z mlekiem",
+          "description": null,
+          "price": 14,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-3",
+          "name": "Espresso",
+          "description": null,
+          "price": 13,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-4",
+          "name": "Espresso doppio",
+          "description": null,
+          "price": 16,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-5",
+          "name": "Cappuccino",
+          "description": null,
+          "price": 13,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-6",
+          "name": "Kawa Latte Macchiato",
+          "description": null,
+          "price": 16,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-7",
+          "name": "Kawa parzona",
+          "description": null,
+          "price": 10,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-8",
+          "name": "Kawa po wiedeńsku",
+          "description": "kawa czarna z bitą śmietaną",
+          "price": 10,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-9",
+          "name": "Czekolada na gorąco z bitą śmietaną",
+          "description": null,
+          "price": 18,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-10",
+          "name": "Herbata Lipton",
+          "description": "czarna, zielona lub owocowa",
+          "price": 10,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "hot-11",
+          "name": "Herbata zimowa z pomarańczą i goździkami",
+          "description": "400 ml",
+          "price": 16,
+          "subcategory": "Gorące"
+        },
+        {
+          "id": "cold-1",
+          "name": "Coca-Cola / Zero / Sprite / Fanta",
+          "description": "250 ml",
+          "price": 10,
+          "subcategory": "Zimne"
+        },
+        {
+          "id": "cold-2",
+          "name": "Tonic Kinley",
+          "description": "Purple, Water lub Aromatic Berry — 250 ml",
+          "price": 10,
+          "subcategory": "Zimne"
+        },
+        {
+          "id": "cold-3",
+          "name": "Woda Kropla Beskidu",
+          "description": "gazowana lub niegazowana — 330 ml",
+          "price": 8,
+          "subcategory": "Zimne"
+        },
+        {
+          "id": "cold-4",
+          "name": "BURN Energy Drink",
+          "description": "250 ml",
+          "price": 14,
+          "subcategory": "Zimne"
+        },
+        {
+          "id": "cold-5",
+          "name": "Sok Cappy",
+          "description": "pomarańczowy lub jabłkowy — 250 ml",
+          "price": 9,
+          "subcategory": "Zimne"
+        },
+        {
+          "id": "cold-6",
+          "name": "Fuze Tea Juice",
+          "description": "brzoskwinia-hibiskus lub cytrynowy — 250 ml",
+          "price": 9,
+          "subcategory": "Zimne"
+        },
+        {
+          "id": "rozgrzewka-1",
+          "name": "Wino grzane",
+          "description": "150 ml",
+          "price": 18,
+          "subcategory": "Na rozgrzewkę"
+        },
+        {
+          "id": "rozgrzewka-2",
+          "name": "Wino grzane bezalkoholowe 0%",
+          "description": "150 ml",
+          "price": 17,
+          "subcategory": "Na rozgrzewkę"
+        },
+        {
+          "id": "rozgrzewka-3",
+          "name": "Herbata z alkoholem Baileys",
+          "description": "17% — 125 ml",
+          "price": 24,
+          "subcategory": "Na rozgrzewkę"
+        }
+      ]
+    },
+    {
+      "id": "alkohole",
+      "name": "Alkohole",
+      "items": [
+        {
+          "id": "piwo-1",
+          "name": "Piwo lane Książęce",
+          "description": "300 ml",
+          "price": 11,
+          "subcategory": "Piwo"
+        },
+        {
+          "id": "piwo-2",
+          "name": "Piwo lane Książęce",
+          "description": "500 ml",
+          "price": 16,
+          "subcategory": "Piwo"
+        },
+        {
+          "id": "piwo-3",
+          "name": "Piwo butelkowane Książęce ciemne",
+          "description": "500 ml",
+          "price": 14,
+          "subcategory": "Piwo"
+        },
+        {
+          "id": "piwo-4",
+          "name": "Piwo butelkowane Książęce czerwone",
+          "description": "łagodne — 500 ml",
+          "price": 13,
+          "subcategory": "Piwo"
+        },
+        {
+          "id": "piwo-5",
+          "name": "Piwo bezalkoholowe Kozel",
+          "description": "półciemne — 500 ml",
+          "price": 13,
+          "subcategory": "Piwo"
+        },
+        {
+          "id": "wodka-1",
+          "name": "Stock",
+          "description": "40% — 50 ml / 500 ml",
+          "price": 12,
+          "priceNote": "/ 180 zł",
+          "subcategory": "Wódka"
+        },
+        {
+          "id": "wodka-2",
+          "name": "Ogińscy",
+          "description": "40% — 50 ml / 500 ml",
+          "price": 15,
+          "priceNote": "/ 100 zł",
+          "subcategory": "Wódka"
+        },
+        {
+          "id": "wodka-3",
+          "name": "Finlandia",
+          "description": "40% — 50 ml / 500 ml",
+          "price": 14,
+          "priceNote": "/ 100 zł",
+          "subcategory": "Wódka"
+        },
+        {
+          "id": "wodka-4",
+          "name": "Śliwowica",
+          "description": "60% — 50 ml",
+          "price": 20,
+          "subcategory": "Wódka"
+        },
+        {
+          "id": "wodka-5",
+          "name": "Lubelska Cytrynówka",
+          "description": "25% — 50 ml / 500 ml",
+          "price": 12,
+          "priceNote": "/ 65 zł",
+          "subcategory": "Wódka"
+        },
+        {
+          "id": "wodka-6",
+          "name": "Lubelska Wiśniówka",
+          "description": "25% — 50 ml / 500 ml",
+          "price": 12,
+          "priceNote": "/ 65 zł",
+          "subcategory": "Wódka"
+        },
+        {
+          "id": "whisky-1",
+          "name": "Jack Daniel's",
+          "description": "40% — 50 ml / 700 ml",
+          "price": 19,
+          "priceNote": "/ 190 zł",
+          "subcategory": "Whisky"
+        },
+        {
+          "id": "whisky-2",
+          "name": "Ballantine's",
+          "description": "40% — 50 ml / 700 ml",
+          "price": 15,
+          "priceNote": "/ 150 zł",
+          "subcategory": "Whisky"
+        },
+        {
+          "id": "whisky-3",
+          "name": "Tullamore",
+          "description": "40% — 50 ml / 700 ml",
+          "price": 17,
+          "priceNote": "/ 170 zł",
+          "subcategory": "Whisky"
+        },
+        {
+          "id": "whisky-4",
+          "name": "Grants",
+          "description": "40% — 50 ml / 700 ml",
+          "price": 17,
+          "priceNote": "/ 170 zł",
+          "subcategory": "Whisky"
+        },
+        {
+          "id": "rum-1",
+          "name": "Bacardi Carta Blanca",
+          "description": "37,5% — 50 ml",
+          "price": 15,
+          "subcategory": "Rum / Koniak"
+        },
+        {
+          "id": "rum-2",
+          "name": "Malibu",
+          "description": "18% — 50 ml",
+          "price": 15,
+          "subcategory": "Rum / Koniak"
+        },
+        {
+          "id": "koniak-1",
+          "name": "Hennessy",
+          "description": "40% — 50 ml",
+          "price": 25,
+          "subcategory": "Rum / Koniak"
+        },
+        {
+          "id": "likier-1",
+          "name": "JägerMeister",
+          "description": "30% — 50 ml / 700 ml",
+          "price": 18,
+          "priceNote": "/ 160 zł",
+          "subcategory": "Likiery"
+        },
+        {
+          "id": "likier-2",
+          "name": "Baileys Irish Cream",
+          "description": "17% — 50 ml",
+          "price": 17,
+          "subcategory": "Likiery"
+        },
+        {
+          "id": "likier-3",
+          "name": "Sheridans",
+          "description": "15,5% — 50 ml",
+          "price": 18,
+          "subcategory": "Likiery"
+        },
+        {
+          "id": "wermut-1",
+          "name": "Martini Bianco",
+          "description": "14,5% — 100 ml",
+          "price": 16,
+          "subcategory": "Wermut"
+        },
+        {
+          "id": "wermut-2",
+          "name": "Martini Rosso",
+          "description": "14,5% — 100 ml",
+          "price": 16,
+          "subcategory": "Wermut"
+        },
+        {
+          "id": "wermut-3",
+          "name": "Campari",
+          "description": "25% — 50 ml",
+          "price": 12,
+          "subcategory": "Wermut"
+        }
+      ]
+    }
+  ]
+}

@@ -372,52 +372,17 @@ function About() {
 }
 
 // ─── MENU ────────────────────────────────────────────────
-const menuCategories = [
-  {
-    name: 'Zupy',
-    description: 'Gotowane na wywarach z domowego rosołu, z sezonowymi składnikami.',
-    items: [
-      { name: 'Kwaśnica góralska', desc: 'na żeberkach, z ziemniakami i śmietaną', price: '18' },
-      { name: 'Rosół babuni', desc: 'złocisty, z domowym makaronem', price: '16' },
-      { name: 'Żurek w chlebku', desc: 'z białą kiełbasą i jajkiem', price: '22' },
-      { name: 'Krem z pieczarek', desc: 'z grzankami i oliwą truflową', price: '20' },
-    ],
-  },
-  {
-    name: 'Dania główne',
-    description: 'Porcje, które naprawdę nasycą — po góralsku, bez oszczędzania.',
-    items: [
-      { name: 'Placek po zbójnicku', desc: 'z gulaszem wieprzowym, cebulą i papryką', price: '34' },
-      { name: 'Kotlet schabowy', desc: 'ręcznie panierowany, z ziemniakami i surówką', price: '32' },
-      { name: 'Pierogi ruskie', desc: '12 sztuk, z cebulką i śmietaną', price: '26' },
-      { name: 'Żeberka BBQ', desc: 'wolno pieczone 6h, z frytkami i coleslaw', price: '42' },
-      { name: 'Pstrąg z grilla', desc: 'cały, z masłem czosnkowym i ziemniakami', price: '38' },
-      { name: 'Gołąbki babuni', desc: 'w sosie pomidorowym, z puree ziemniaczanym', price: '28' },
-    ],
-  },
-  {
-    name: 'Z grilla',
-    description: 'Oscypek i halloumi prosto z rusztu.',
-    items: [
-      { name: 'Oscypek z grilla', desc: 'z żurawiną i rukolą', price: '22' },
-      { name: 'Halloumi z grilla', desc: 'z miodem i orzechami', price: '24' },
-      { name: 'Kiełbasa zakopiańska', desc: 'z musztardą i chrzanem', price: '20' },
-    ],
-  },
-  {
-    name: 'Desery',
-    description: 'Na słodko — domowe, nie z kartonika.',
-    items: [
-      { name: 'Szarlotka na ciepło', desc: 'z lodami waniliowymi i sosem karmelowym', price: '18' },
-      { name: 'Naleśniki z jagodami', desc: 'z bitą śmietaną', price: '20' },
-      { name: 'Sernik góralski', desc: 'pieczony, z sosem malinowym', price: '16' },
-    ],
-  },
-]
-
 function MenuSection() {
   const ref = useRef(null)
   const [active, setActive] = useState(0)
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+    fetch('/menu.json')
+      .then((r) => r.json())
+      .then((data) => setCategories(data.categories))
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -432,6 +397,22 @@ function MenuSection() {
     }, ref)
     return () => ctx.revert()
   }, [])
+
+  const currentCategory = categories[active]
+
+  // Build render list with subcategory headers injected
+  function buildRenderList(items) {
+    const list = []
+    let lastSub = null
+    items.forEach((item, i) => {
+      if (item.subcategory && item.subcategory !== lastSub) {
+        list.push({ type: 'subheader', name: item.subcategory, key: `sub-${item.subcategory}` })
+        lastSub = item.subcategory
+      }
+      list.push({ type: 'item', ...item, _index: i })
+    })
+    return list
+  }
 
   return (
     <section ref={ref} id="menu" className="py-24 md:py-32 px-6 md:px-16 lg:px-24 bg-warm-white">
@@ -448,54 +429,74 @@ function MenuSection() {
           </p>
         </div>
 
-        {/* Category tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-14">
-          {menuCategories.map((cat, i) => (
-            <button
-              key={cat.name}
-              onClick={() => setActive(i)}
-              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                i === active
-                  ? 'bg-espresso text-cream shadow-[0_4px_16px_-4px_rgba(44,36,24,0.3)]'
-                  : 'bg-espresso/5 text-espresso/50 hover:bg-espresso/10 hover:text-espresso/70'
-              }`}
-            >
-              {cat.name}
-            </button>
-          ))}
-        </div>
+        {categories.length === 0 ? (
+          <div className="text-center text-espresso/30 font-mono text-sm py-16">Ładowanie menu…</div>
+        ) : (
+          <>
+            {/* Category tabs */}
+            <div className="flex flex-wrap justify-center gap-2 mb-14">
+              {categories.map((cat, i) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActive(i)}
+                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                    i === active
+                      ? 'bg-espresso text-cream shadow-[0_4px_16px_-4px_rgba(44,36,24,0.3)]'
+                      : 'bg-espresso/5 text-espresso/50 hover:bg-espresso/10 hover:text-espresso/70'
+                  }`}
+                >
+                  {cat.name}
+                </button>
+              ))}
+            </div>
 
-        {/* Menu items */}
-        <div>
-          <p className="font-drama italic text-espresso/40 text-sm mb-8 text-center">
-            {menuCategories[active].description}
-          </p>
-          <div className="space-y-0">
-            {menuCategories[active].items.map((item, i) => (
-              <div
-                key={item.name}
-                className="menu-item flex items-baseline gap-4 py-5 px-4 rounded-xl"
-                style={{
-                  animation: `fadeSlideIn 0.4s cubic-bezier(0.32, 0.72, 0, 1) ${i * 60}ms both`,
-                }}
-              >
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-heading font-bold text-espresso tracking-tight">{item.name}</h4>
-                  <p className="text-espresso/40 text-sm mt-0.5">{item.desc}</p>
+            {/* Menu items */}
+            {currentCategory && (
+              <div key={currentCategory.id}>
+                <div className="space-y-0">
+                  {buildRenderList(currentCategory.items).map((entry, i) =>
+                    entry.type === 'subheader' ? (
+                      <p
+                        key={entry.key}
+                        className="font-mono text-xs tracking-[0.2em] uppercase text-terracotta/70 pt-7 pb-3 px-4 first:pt-0"
+                      >
+                        {entry.name}
+                      </p>
+                    ) : (
+                      <div
+                        key={entry.id}
+                        className="flex items-baseline gap-4 py-4 px-4 rounded-xl hover:bg-espresso/[0.025] transition-colors duration-300"
+                        style={{
+                          animation: `fadeSlideIn 0.4s cubic-bezier(0.32, 0.72, 0, 1) ${entry._index * 40}ms both`,
+                        }}
+                      >
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-heading font-bold text-espresso tracking-tight leading-snug">
+                            {entry.name}
+                          </h4>
+                          {entry.description && (
+                            <p className="text-espresso/40 text-sm mt-0.5">{entry.description}</p>
+                          )}
+                        </div>
+                        <span className="flex-shrink-0 w-px h-4 bg-espresso/10 mx-2 hidden sm:block" />
+                        <span className="font-mono text-terracotta font-medium text-sm whitespace-nowrap">
+                          {entry.price} zł
+                          {entry.priceNote && (
+                            <span className="text-espresso/30 font-normal"> {entry.priceNote}</span>
+                          )}
+                        </span>
+                      </div>
+                    )
+                  )}
                 </div>
-                <span className="flex-shrink-0 w-px h-4 bg-espresso/10 mx-2 hidden sm:block" />
-                <span className="font-mono text-terracotta font-medium text-sm whitespace-nowrap">
-                  {item.price} zł
-                </span>
+                <p className="text-center text-espresso/25 text-xs mt-10 font-mono">
+                  Ceny orientacyjne. Menu zmienia się sezonowo.
+                </p>
               </div>
-            ))}
-          </div>
-          <p className="text-center text-espresso/25 text-xs mt-10 font-mono">
-            Ceny orientacyjne. Menu zmienia się sezonowo.
-          </p>
-        </div>
+            )}
+          </>
+        )}
       </div>
-
     </section>
   )
 }
