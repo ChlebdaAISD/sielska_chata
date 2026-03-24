@@ -196,13 +196,13 @@ function Hero() {
             </div>
 
             <h1 className="hero-title font-heading text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter leading-none mb-5">
-              Smaki polskiej
+              Dobra kuchnia,
               <br />
-              tradycji
+              coś dla każdego
             </h1>
 
             <p className="hero-subtitle font-drama italic text-cream/85 text-xl md:text-3xl lg:text-4xl mb-10">
-              w sercu Rabki-Zdrój.
+              w rustykalnym sercu Rabki-Zdrój.
             </p>
 
             <div className="hero-cta flex flex-wrap gap-4">
@@ -318,11 +318,11 @@ function About() {
             </div>
 
             <h2 className="font-drama italic text-espresso text-3xl md:text-4xl lg:text-5xl leading-snug mb-8">
-              Restauracja rodzinna, prowadzona z myślą o gościach, nie o rankingach.
+              Restauracja rodzinna z szeroką kartą — drewniane wnętrze, uczciwa kuchnia.
             </h2>
 
             <p className="text-espresso/55 text-lg leading-relaxed max-w-[58ch] mb-8">
-              Większość restauracji w turystycznych miejscowościach serwuje „coś dla każdego". Uniwersalne menu, zamrożone półprodukty, szybka rotacja. My stawiamy na jedno — żebyś wyszedł z pełnym brzuchem i dobrym wspomnieniem.
+              Mamy szeroką kartę — i nie wstydzimy się tego. Przy jednym stole siedzą dzieci z klopsikam i frytkami, rodzice z jagnięciną albo sandaczem, dziadkowie z rosołem. Każdy wychodzi syty, nikt nie musi kompromisować.
             </p>
 
             <p className="text-espresso/55 text-lg leading-relaxed max-w-[58ch]">
@@ -335,8 +335,8 @@ function About() {
             {[
               {
                 icon: ChefHat,
-                title: 'Kuchnia polska',
-                text: 'Kwaśnica, oscypek z grilla, placki po zbójnicku — bez skrótów, z lokalnych składników.',
+                title: 'Polska klasyka i nie tylko',
+                text: 'Od pierogów, golonki i placków po zbójnicku, przez żeberka BBQ i sandacza, aż po jagnięcinę i krewetki. Coś dobrego dla każdego.',
               },
               {
                 icon: Users,
@@ -425,7 +425,7 @@ function MenuSection() {
             Menu
           </h2>
           <p className="text-espresso/50 max-w-md mx-auto leading-relaxed">
-            Gotujemy z tego, co mamy pod ręką — sezonowo, lokalnie, bez kombinowania.
+            Szeroka karta na każdy apetyt — polska klasyka, dania rybne, europejskie smaki i menu dla dzieci.
           </p>
         </div>
 
@@ -537,7 +537,7 @@ function Philosophy() {
         </p>
 
         <p className="text-cream/35 text-base leading-relaxed max-w-lg mx-auto">
-          Sielska Chata to miejsce, gdzie czas zwalnia. Siadasz, zamawiasz bez pośpiechu, a my podajemy to, co gotujemy od lat — uczciwie i z sercem.
+          Sielska Chata to miejsce, gdzie czas zwalnia. Drewniane wnętrze, szeroka karta, duże porcje. Siadasz, zamawiasz bez pośpiechu, a my podajemy to, co gotujemy od lat — uczciwie i z sercem.
         </p>
       </div>
 
@@ -877,7 +877,7 @@ function Footer() {
               <span className="font-drama text-cream text-xl font-semibold">Sielska Chata</span>
             </div>
             <p className="text-cream/30 text-sm leading-relaxed max-w-sm">
-              Smaki polskiej tradycji w uzdrowiskowej Rabce-Zdrój. Restauracja rodzinna z kuchnią domową, cateringiem i organizacją imprez okolicznościowych.
+              Restauracja rodzinna w uzdrowiskowej Rabce-Zdrój. Szeroka karta, duże porcje, drewniane wnętrze i organizacja imprez okolicznościowych.
             </p>
           </div>
           <div className="md:col-span-3">
@@ -932,12 +932,6 @@ function Footer() {
 
 // ─── APP ─────────────────────────────────────────────────
 function App() {
-  useEffect(() => {
-    if (window.location.pathname.startsWith('/wersja2')) {
-      document.documentElement.setAttribute('data-theme', 'v2')
-    }
-    return () => document.documentElement.removeAttribute('data-theme')
-  }, [])
 
   return (
     <div className="noise-overlay">
