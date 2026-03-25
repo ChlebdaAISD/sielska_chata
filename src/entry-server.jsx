@@ -10,12 +10,12 @@ const routesMeta = {
     canonical: `${DOMAIN}/`,
   },
   '/menu/': {
-    title: 'Menu — Sielska Chata Rabka-Zdrój | Kuchnia polska i europejska',
+    title: 'Menu Restauracji — Sielska Chata Rabka-Zdrój',
     description: 'Pełna karta dań Sielskiej Chaty w Rabce-Zdrój. Przystawki, zupy, dania główne, ryby, pierogi, desery i menu dla dzieci. Jedzenie na wynos dostępne codziennie 9–19.',
     canonical: `${DOMAIN}/menu/`,
   },
   '/imprezy/': {
-    title: 'Imprezy Okolicznościowe Rabka-Zdrój | Komunia, Chrzciny, Urodziny — Sielska Chata',
+    title: 'Imprezy Okolicznościowe Rabka-Zdrój — Sielska Chata',
     description: 'Organizacja komunii, chrzcin, urodzin i bankietów firmowych w Rabce-Zdrój. Klimatyczne wnętrze, kuchnia polska i europejska, bezpłatny parking. Zadzwoń i zarezerwuj termin.',
     canonical: `${DOMAIN}/imprezy/`,
   },

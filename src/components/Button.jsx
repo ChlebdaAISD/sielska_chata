@@ -24,6 +24,7 @@ export default function Button({
 
   const variants = {
     primary: {
+      // transition: transform handled by .btn-magnetic CSS class
       wrapper: 'btn-magnetic bg-terracotta text-white',
       bg: <span className="btn-bg bg-terracotta-dark rounded-full" />,
       iconBg: 'bg-white/15',
@@ -34,12 +35,12 @@ export default function Button({
       iconBg: 'bg-white/10',
     },
     secondary: {
-      wrapper: 'border border-espresso/15 text-espresso hover:bg-espresso/5',
+      wrapper: 'border border-espresso/15 text-espresso hover:bg-espresso/5 transition-colors duration-300',
       bg: null,
       iconBg: null,
     },
     'secondary-dark': {
-      wrapper: 'border border-white/25 text-white hover:bg-white/10',
+      wrapper: 'border border-white/25 text-white hover:bg-white/10 transition-colors duration-300',
       bg: null,
       iconBg: null,
     },
@@ -64,8 +65,7 @@ export default function Button({
   const s = sizes[size] ?? sizes.md
 
   const cls = [
-    'group inline-flex items-center gap-3 rounded-full font-semibold',
-    'transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]',
+    'group inline-flex shrink-0 items-center gap-3 rounded-full font-semibold whitespace-nowrap',
     v.wrapper,
     s.wrapper,
     className,
@@ -76,7 +76,7 @@ export default function Button({
   const inner = (
     <>
       {v.bg}
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 inline-flex items-center gap-1.5">{children}</span>
       {hasIcon && (
         <span
           className={[

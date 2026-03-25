@@ -132,9 +132,52 @@ function EventCard({ event, index }) {
   )
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Jak zarezerwować salę na imprezę w Sielskiej Chacie?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Najprościej zadzwoń pod numer +48 780 285 859. Omówimy datę, liczbę gości i rodzaj imprezy. Możesz też wpaść osobiście — jesteśmy czynni codziennie 9:00–19:00.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Na ile osób można zorganizować przyjęcie?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Przyjmujemy grupy od kilkunastu do kilkudziesięciu osób. Skontaktuj się z nami, żeby ustalić szczegóły dotyczące Twojej uroczystości.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Czy menu na imprezę można dostosować?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oczywiście. Nasza szeroka karta pozwala skomponować menu pasujące do każdej okazji — od tradycyjnych polskich dań, przez ryby i dania europejskie, aż po menu dla dzieci.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Czy jest parking przy restauracji?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Tak — dysponujemy dużym, bezpłatnym parkingiem. Goście przyjeżdżający z całej Małopolski nie mają problemów z miejscem.',
+      },
+    },
+  ],
+}
+
 export default function Events() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero */}
       <section className="relative pt-40 pb-20 px-6 md:px-16 lg:px-24 bg-espresso overflow-hidden">
         <MountainSilhouette className="absolute bottom-0 left-0 w-full h-16 md:h-20" color="#FAF7F2" />
