@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Phone, ArrowRight, Award, Star, ChefHat, Mountain } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
 import Button from '../components/Button'
+import { CONTACT } from '../data/contact'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -87,7 +88,7 @@ export default function About() {
               </p>
 
               <p className="text-espresso/55 text-lg leading-relaxed">
-                Jesteśmy Laureatem Orłów Gastronomii 2026 z oceną 8.9/10 oraz utrzymujemy ocenę 4.7 w Google Maps. To dla nas powód do dumy, ale przede wszystkim zobowiązanie do utrzymania jakości każdego dnia.
+                Orły Gastronomii 2026 — ocena 8.9. Na Google Maps 4.7 z ponad 76 recenzji. Oba cieszą, ale bardziej liczy się to, co czujesz wychodząc — i czy wróciłbyś w przyszłym tygodniu.
               </p>
             </div>
 
@@ -140,10 +141,10 @@ export default function About() {
             Zapraszamy do Sielskiej Chaty
           </h2>
           <p className="text-espresso/50 mb-8 max-w-md mx-auto">
-            ul. Piłsudskiego 18, Rabka-Zdrój. Czynni codziennie 9:00–19:00.
+            {CONTACT.address.full}. {CONTACT.hours.display}.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button href="tel:+48780285859" variant="primary" icon={<Phone size={15} />}>
+            <Button href={CONTACT.phone.href} variant="primary" icon={<Phone size={15} />}>
               Zadzwoń do nas
             </Button>
             <Button to="/menu/" variant="secondary">

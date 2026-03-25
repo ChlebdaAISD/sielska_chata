@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
 import Button from '../components/Button'
+import { CONTACT } from '../data/contact'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -63,17 +64,17 @@ function Hero() {
             </div>
 
             <h1 className="hero-title font-heading text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter leading-none mb-5">
-              Dobra kuchnia,
+              Sielska Chata —
               <br />
-              coś dla każdego
+              Restauracja w Rabce-Zdrój
             </h1>
 
             <p className="hero-subtitle font-drama italic text-cream/85 text-xl md:text-3xl lg:text-4xl mb-10">
-              Restauracja w sercu Rabki-Zdrój.
+              Dobra kuchnia. Coś dla każdego.
             </p>
 
             <div className="hero-cta flex flex-wrap gap-4">
-              <Button href="tel:+48780285859" variant="primary" icon={<Phone size={16} />}>
+              <Button href={CONTACT.phone.href} variant="primary" icon={<Phone size={16} />}>
                 Zarezerwuj stolik
               </Button>
               <Button to="/menu/" variant="secondary-dark">
@@ -176,7 +177,7 @@ function About() {
             </h2>
 
             <p className="text-espresso/55 text-lg leading-relaxed max-w-[58ch] mb-8">
-              Mamy szeroką kartę — i nie wstydzimy się tego. Przy jednym stole siedzą dzieci z klopsikam i frytkami, rodzice z jagnięciną albo sandaczem w sosie borowikowym, dziadkowie z rosołem. Każdy wychodzi syty, nikt nie musi kompromisować.
+              Mamy szeroką kartę — i nie wstydzimy się tego. Przy jednym stole siedzą dzieci z klopskami i frytkami, rodzice z jagnięciną albo sandaczem w sosie borowikowym, dziadkowie z rosołem. Każdy wychodzi syty, nikt nie musi kompromisować.
             </p>
 
             <p className="text-espresso/55 text-lg leading-relaxed max-w-[58ch] mb-8">
@@ -304,7 +305,7 @@ function MenuPreview() {
           <Button to="/menu/" variant="primary-dark" icon={<ArrowRight size={14} />}>
             Zobacz pełne menu
           </Button>
-          <p className="text-espresso/30 text-xs font-mono mt-4">Dostępne również jedzenie na wynos</p>
+          <p className="text-espresso/30 text-xs font-mono mt-4">Dostępne również jedzenie na wynos w Rabce-Zdrój</p>
         </div>
       </div>
     </section>
@@ -542,14 +543,14 @@ function ContactTeaser() {
               <span className="font-mono text-xs tracking-[0.25em] uppercase">Kontakt</span>
             </div>
             <h2 className="font-drama italic text-espresso text-3xl md:text-4xl leading-snug mb-4">
-              Zapraszamy do Sielskiej Chaty
+              Zapraszamy do Sielskiej Chaty w Rabce-Zdrój
             </h2>
             <p className="text-espresso/50 leading-relaxed mb-8">
-              Restauracja czynna codziennie 9:00–19:00. Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
+              Szukasz gdzie zjeść w Rabce-Zdrój? Czynni codziennie 9:00–19:00. Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button href="tel:+48780285859" variant="primary" icon={<Phone size={15} />}>
-                +48 780 285 859
+              <Button href={CONTACT.phone.href} variant="primary" icon={<Phone size={15} />}>
+                {CONTACT.phone.display}
               </Button>
               <Button to="/kontakt/" variant="secondary">
                 Jak dojechać <ArrowRight size={15} />
@@ -559,8 +560,8 @@ function ContactTeaser() {
 
           <div className="space-y-4">
             {[
-              { icon: MapPin, label: 'Adres', value: 'ul. Piłsudskiego 18, 34-700 Rabka-Zdrój' },
-              { icon: Clock, label: 'Godziny', value: 'Codziennie 9:00 – 19:00' },
+              { icon: MapPin, label: 'Adres', value: CONTACT.address.full },
+              { icon: Clock, label: 'Godziny', value: CONTACT.hours.display },
               { icon: Car, label: 'Parking', value: 'Duży, bezpłatny parking przy restauracji' },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-4 bg-warm-white rounded-2xl p-5 border border-espresso/5">

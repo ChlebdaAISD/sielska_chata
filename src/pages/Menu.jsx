@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import menuData from '../data/menu.json'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Phone, ArrowRight, UtensilsCrossed } from 'lucide-react'
@@ -26,14 +27,7 @@ function buildRenderList(items) {
 export default function Menu() {
   const ref = useRef(null)
   const [active, setActive] = useState(0)
-  const [categories, setCategories] = useState([])
-
-  useEffect(() => {
-    fetch('/menu.json')
-      .then((r) => r.json())
-      .then((data) => setCategories(data.categories))
-      .catch(() => {})
-  }, [])
+  const categories = menuData.categories
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -49,8 +43,6 @@ export default function Menu() {
     }, ref)
     return () => ctx.revert()
   }, [])
-
-  const currentCategory = categories[active]
 
   return (
     <>
@@ -90,73 +82,64 @@ export default function Menu() {
             ))}
           </div>
 
-          {categories.length === 0 ? (
-            <div className="text-center text-espresso/30 font-mono text-sm py-16">Ładowanie menu…</div>
-          ) : (
-            <>
-              {/* Category tabs */}
-              <div className="flex flex-wrap justify-center gap-2 mb-14">
-                {categories.map((cat, i) => (
-                  <button
-                    key={cat.id}
-                    onClick={() => setActive(i)}
-                    className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                      i === active
-                        ? 'bg-espresso text-cream shadow-[0_4px_16px_-4px_rgba(44,36,24,0.3)]'
-                        : 'bg-espresso/5 text-espresso/50 hover:bg-espresso/10 hover:text-espresso/70'
-                    }`}
-                  >
-                    {cat.name}
-                  </button>
-                ))}
-              </div>
+          {/* Category tabs */}
+          <div className="flex flex-wrap justify-center gap-2 mb-14">
+            {categories.map((cat, i) => (
+              <button
+                key={cat.id}
+                onClick={() => setActive(i)}
+                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                  i === active
+                    ? 'bg-espresso text-cream shadow-[0_4px_16px_-4px_rgba(44,36,24,0.3)]'
+                    : 'bg-espresso/5 text-espresso/50 hover:bg-espresso/10 hover:text-espresso/70'
+                }`}
+              >
+                {cat.name}
+              </button>
+            ))}
+          </div>
 
-              {/* Menu items */}
-              {currentCategory && (
-                <div key={currentCategory.id}>
-                  <div className="space-y-0">
-                    {buildRenderList(currentCategory.items).map((entry) =>
-                      entry.type === 'subheader' ? (
-                        <p
-                          key={entry.key}
-                          className="font-mono text-xs tracking-[0.2em] uppercase text-terracotta/70 pt-7 pb-3 px-4 first:pt-0"
-                        >
+          {/* Menu items — all categories rendered for SEO; only active one visible */}
+          {categories.map((cat, i) => (
+            <div key={cat.id} className={i === active ? undefined : 'hidden'}>
+              <div className="space-y-0">
+                {buildRenderList(cat.items).map((entry) =>
+                  entry.type === 'subheader' ? (
+                    <p
+                      key={entry.key}
+                      className="font-mono text-xs tracking-[0.2em] uppercase text-terracotta/70 pt-7 pb-3 px-4 first:pt-0"
+                    >
+                      {entry.name}
+                    </p>
+                  ) : (
+                    <div
+                      key={entry.id}
+                      className="flex items-baseline gap-4 py-4 px-4 rounded-xl hover:bg-espresso/[0.025] transition-colors duration-300"
+                    >
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-heading font-bold text-espresso tracking-tight leading-snug">
                           {entry.name}
-                        </p>
-                      ) : (
-                        <div
-                          key={entry.id}
-                          className="flex items-baseline gap-4 py-4 px-4 rounded-xl hover:bg-espresso/[0.025] transition-colors duration-300"
-                          style={{
-                            animation: `fadeSlideIn 0.4s cubic-bezier(0.32, 0.72, 0, 1) ${entry._index * 40}ms both`,
-                          }}
-                        >
-                          <div className="flex-1 min-w-0">
-                            <h3 className="font-heading font-bold text-espresso tracking-tight leading-snug">
-                              {entry.name}
-                            </h3>
-                            {entry.description && (
-                              <p className="text-espresso/40 text-sm mt-0.5">{entry.description}</p>
-                            )}
-                          </div>
-                          <span className="flex-shrink-0 w-px h-4 bg-espresso/10 mx-2 hidden sm:block" />
-                          <span className="font-mono text-terracotta font-medium text-sm whitespace-nowrap">
-                            {entry.price} zł
-                            {entry.priceNote && (
-                              <span className="text-espresso/30 font-normal"> {entry.priceNote}</span>
-                            )}
-                          </span>
-                        </div>
-                      )
-                    )}
-                  </div>
-                  <p className="text-center text-espresso/25 text-xs mt-10 font-mono">
-                    Ceny orientacyjne. Menu zmienia się sezonowo.
-                  </p>
-                </div>
-              )}
-            </>
-          )}
+                        </h3>
+                        {entry.description && (
+                          <p className="text-espresso/40 text-sm mt-0.5">{entry.description}</p>
+                        )}
+                      </div>
+                      <span className="flex-shrink-0 w-px h-4 bg-espresso/10 mx-2 hidden sm:block" />
+                      <span className="font-mono text-terracotta font-medium text-sm whitespace-nowrap">
+                        {entry.price} zł
+                        {entry.priceNote && (
+                          <span className="text-espresso/30 font-normal"> {entry.priceNote}</span>
+                        )}
+                      </span>
+                    </div>
+                  )
+                )}
+              </div>
+              <p className="text-center text-espresso/25 text-xs mt-10 font-mono">
+                Ceny orientacyjne. Menu zmienia się sezonowo.
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 

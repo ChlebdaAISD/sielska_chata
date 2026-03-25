@@ -1,5 +1,6 @@
 import { Link } from 'wouter'
 import MountainSilhouette from './MountainSilhouette'
+import { CONTACT } from '../data/contact'
 
 export default function Footer() {
   return (
@@ -41,12 +42,20 @@ export default function Footer() {
           <div className="md:col-span-4">
             <h4 className="font-heading font-bold text-cream/75 text-xs tracking-wider uppercase mb-5">Kontakt</h4>
             <div className="space-y-3 text-sm">
-              <p className="text-cream/65">ul. Piłsudskiego 18</p>
-              <p className="text-cream/65">34-700 Rabka-Zdrój</p>
-              <a href="tel:+48780285859" className="block text-terracotta hover:underline font-semibold">
-                +48 780 285 859
+              <p className="text-cream/65">{CONTACT.address.street}</p>
+              <p className="text-cream/65">{CONTACT.address.postalCode} {CONTACT.address.city}</p>
+              <a href={CONTACT.phone.href} className="block text-terracotta hover:underline font-semibold">
+                {CONTACT.phone.display}
               </a>
-              <p className="text-cream/65">Codziennie 9:00–19:00</p>
+              <p className="text-cream/65">{CONTACT.hours.display}</p>
+              <a
+                href={CONTACT.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-cream/45 hover:text-terracotta transition-colors duration-300 text-xs font-mono"
+              >
+                Facebook →
+              </a>
             </div>
           </div>
         </div>

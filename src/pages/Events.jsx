@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Phone, Users, CheckCircle } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
 import Button from '../components/Button'
+import { CONTACT } from '../data/contact'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -14,38 +15,38 @@ const eventTypes = [
     id: 'komunia',
     title: 'Komunia Święta',
     subtitle: 'Organizacja komunii w Rabce-Zdrój',
-    desc: 'Pierwsza Komunia Święta to jeden z najważniejszych dni w życiu Twojego dziecka. Sielska Chata w Rabce-Zdrój zapewnia ciepłą, rodzinną atmosferę dla całej rodziny — od małych gości po dziadków. Przygotujemy menu z ulubionymi daniami dzieci i wykwintnymi potrawami dla dorosłych.',
+    desc: 'Komunia to dzień, po którym wspomnienia zostają na lata. W Sielskiej Chacie w Rabce-Zdrój dbamy o to, żeby część przy stole była bez kłopotów — menu dopasowane do dzieci i dorosłych, klimatyczna sala z drewnianym wystrojem, obsługa, która zna takie uroczystości. Ty skupiasz się na dziecku.',
     features: [
-      'Menu dostosowane do dzieci i dorosłych',
-      'Przestronna sala z klimatycznym drewnianym wystrojem',
-      'Obsługa dla grup od kilkunastu do kilkudziesięciu osób',
+      'Menu dla dzieci i dorosłych — każdy znajdzie coś swojego',
+      'Klimatyczna sala z drewnianym wystrojem',
+      'Obsługa grup od kilkunastu do kilkudziesięciu osób',
       'Możliwość dekoracji sali na tę okazję',
-      'Bezpłatny parking dla gości',
+      'Bezpłatny parking przy restauracji',
     ],
   },
   {
     id: 'chrzciny',
     title: 'Chrzciny i Przyjęcia Chrzcielne',
     subtitle: 'Chrzciny w restauracji Rabka-Zdrój',
-    desc: 'Przywitaj nowe życie przy wspólnym stole. Organizujemy przyjęcia chrzcielne w przytulnym, drewnianym wnętrzu Sielskiej Chaty. Centrum Rabki-Zdrój, blisko kościołów i Parku Zdrojowego — idealne miejsce na uroczysty rodzinny obiad po ceremonii.',
+    desc: 'Po ceremonii w kościele wszyscy chcą po prostu usiąść i zjeść razem. Organizujemy chrzciny w drewnianym, ciepłym wnętrzu Sielskiej Chaty — centrum Rabki-Zdrój, kilka minut od głównych kościołów. Elastyczne menu, spokojna atmosfera, parking przy wejściu.',
     features: [
-      'Elastyczne menu dostosowane do Twoich oczekiwań',
-      'Kuchnia polska i europejska — coś dla każdego smaku',
-      'Lokalizacja w centrum Rabki-Zdrój — blisko kościołów',
+      'Menu do wyboru — kuchnia polska i europejska',
+      'Centrum Rabki-Zdrój — blisko kościołów i Parku Zdrojowego',
       'Możliwość zamówienia tortu lub ciasta na uroczystość',
-      'Duży parking dla gości',
+      'Obsługa grup rodzinnych od kilkunastu osób',
+      'Duży bezpłatny parking',
     ],
   },
   {
     id: 'urodziny',
     title: 'Urodziny i Jubileusze',
     subtitle: 'Urodziny w restauracji Rabka-Zdrój',
-    desc: 'Świętuj urodziny, imieniny lub jubileusz z rodziną i przyjaciółmi w wyjątkowym miejscu. Sielska Chata w Rabce-Zdrój to klimatyczne wnętrze z drewnianym wykończeniem, szeroka karta dań i serdeczna obsługa. Zajmujemy się wszystkim — Ty skupiasz się na gościach.',
+    desc: 'Urodziny w restauracji Rabka-Zdrój — bez planowania na ostatnią chwilę. Sielska Chata to klimatyczne drewniane wnętrze, karta, z której każdy coś wybierze, i obsługa, która nie potrzebuje instrukcji. Ty skupiasz się na gościach, my na reszcie.',
     features: [
       'Rezerwacja sali lub wydzielonej przestrzeni',
       'Indywidualne menu na zamówienie',
       'Możliwość wniesienia własnego tortu',
-      'Miła atmosfera — miejsce idealne na urodziny rodzinne',
+      'Kuchnia polska i europejska — szeroki wybór dla każdego',
       'Czynni codziennie 9:00–19:00',
     ],
   },
@@ -53,12 +54,12 @@ const eventTypes = [
     id: 'firmowe',
     title: 'Imprezy Firmowe i Bankiety',
     subtitle: 'Bankiet i spotkanie firmowe w Rabce-Zdrój',
-    desc: 'Szukasz miejsca na spotkanie integracyjne, kolację firmową lub bankiet w okolicach Rabki-Zdrój i Nowego Targu? Sielska Chata dysponuje przestrzenią dla grup biznesowych i oferuje obsługę na najwyższym poziomie. Kuchnia polska i europejska z opcją menu dostosowanego do preferencji grupy.',
+    desc: 'Szukasz miejsca na bankiet firmowy lub spotkanie integracyjne w okolicach Rabki-Zdrój? Sielska Chata to dobra lokalizacja przy trasie Kraków–Zakopane, duży parking, przestrzeń dla kilkudziesięciu osób i kuchnia polska z europejskim zacięciem. Menu ustalamy pod konkretną grupę.',
     features: [
-      'Obsługa grup firmowych i integracyjnych',
+      'Doświadczenie w obsłudze grup od 15 do 60 osób',
       'Menu dostosowane do preferencji i budżetu',
-      'Kuchnia polska i europejska — idealna na spotkania mieszanych grup',
-      'Lokalizacja przy trasie Kraków–Zakopane',
+      'Kuchnia polska i europejska — dobre na mieszane grupy',
+      'Lokalizacja przy trasie Kraków–Zakopane, duży parking',
       'Możliwość rezerwacji całej sali',
     ],
   },
@@ -97,7 +98,7 @@ function EventCard({ event, index }) {
         <h2 className="font-drama italic text-espresso text-3xl md:text-4xl leading-snug mt-2 mb-3">
           {event.title}
         </h2>
-        <p className="font-mono text-xs text-terracotta mb-6 tracking-wide">{event.subtitle}</p>
+        <h3 className="font-mono text-xs text-terracotta mb-6 tracking-wide">{event.subtitle}</h3>
         <p className="text-espresso/55 leading-relaxed mb-8">{event.desc}</p>
 
         <ul className="space-y-3 mb-8">
@@ -109,7 +110,7 @@ function EventCard({ event, index }) {
           ))}
         </ul>
 
-        <Button href="tel:+48780285859" variant="primary" size="sm" icon={<Phone size={14} />}>
+        <Button href={CONTACT.phone.href} variant="primary" size="sm" icon={<Phone size={14} />}>
           Zapytaj o termin
         </Button>
       </div>
@@ -141,7 +142,7 @@ const faqSchema = {
       name: 'Jak zarezerwować salę na imprezę w Sielskiej Chacie?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Najprościej zadzwoń pod numer +48 780 285 859. Omówimy datę, liczbę gości i rodzaj imprezy. Możesz też wpaść osobiście — jesteśmy czynni codziennie 9:00–19:00.',
+        text: `Najprościej zadzwoń pod numer ${CONTACT.phone.display}. Omówimy datę, liczbę gości i rodzaj imprezy. Możesz też wpaść osobiście — jesteśmy czynni ${CONTACT.hours.display}.`,
       },
     },
     {
@@ -235,7 +236,7 @@ export default function Events() {
             {[
               {
                 q: 'Jak zarezerwować salę na imprezę w Sielskiej Chacie?',
-                a: 'Najprościej zadzwoń pod numer +48 780 285 859. Omówimy datę, liczbę gości i rodzaj imprezy. Możesz też wpaść osobiście — jesteśmy czynni codziennie 9:00–19:00.',
+                a: `Najprościej zadzwoń pod numer ${CONTACT.phone.display}. Omówimy datę, liczbę gości i rodzaj imprezy. Możesz też wpaść osobiście — jesteśmy czynni ${CONTACT.hours.display}.`,
               },
               {
                 q: 'Na ile osób można zorganizować przyjęcie?',
@@ -272,8 +273,8 @@ export default function Events() {
           <p className="text-cream/45 mb-8 max-w-md mx-auto">
             Zadzwoń do nas — ustalimy datę, menu i wszystkie szczegóły Twojej uroczystości.
           </p>
-          <Button href="tel:+48780285859" variant="primary" size="lg" icon={<Phone size={18} />}>
-            +48 780 285 859
+          <Button href={CONTACT.phone.href} variant="primary" size="lg" icon={<Phone size={18} />}>
+            {CONTACT.phone.display}
           </Button>
         </div>
       </section>

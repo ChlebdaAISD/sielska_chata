@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Phone, MapPin, Clock, Car, ArrowRight } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
 import Button from '../components/Button'
+import { CONTACT } from '../data/contact'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -66,20 +67,20 @@ export default function Contact() {
                   {
                     icon: MapPin,
                     label: 'Adres',
-                    value: 'ul. Piłsudskiego 18, 34-700 Rabka-Zdrój',
-                    href: 'https://maps.google.com/?q=Sielska+Chata+Rabka-Zdrój',
+                    value: CONTACT.address.full,
+                    href: CONTACT.maps.googleMaps,
                     external: true,
                   },
                   {
                     icon: Phone,
                     label: 'Telefon',
-                    value: '+48 780 285 859',
-                    href: 'tel:+48780285859',
+                    value: CONTACT.phone.display,
+                    href: CONTACT.phone.href,
                   },
                   {
                     icon: Clock,
                     label: 'Godziny otwarcia',
-                    value: 'Codziennie 9:00 – 19:00 (7 dni w tygodniu)',
+                    value: `${CONTACT.hours.display} (${CONTACT.hours.days})`,
                   },
                   {
                     icon: Car,
@@ -110,7 +111,7 @@ export default function Contact() {
                 ))}
               </div>
 
-              <Button href="tel:+48780285859" variant="primary" icon={<Phone size={15} />}>
+              <Button href={CONTACT.phone.href} variant="primary" icon={<Phone size={15} />}>
                 Zadzwoń teraz
               </Button>
             </div>
@@ -121,24 +122,24 @@ export default function Contact() {
                 <div className="bg-warm-white rounded-[calc(2rem-0.375rem)] overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)]">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2584.3!2d19.9567!3d49.6097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47160a11db98e96d%3A0x6a4c4ab0c0e35bc6!2sPi%C5%82sudskiego%2018%2C%2034-700%20Rabka-Zdr%C3%B3j!5e0!3m2!1spl!2spl!4v1"
+                    title={`Mapa — ${CONTACT.name}, ${CONTACT.address.full}`}
                     width="100%"
                     height="420"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Mapa — Sielska Chata, Rabka-Zdrój, ul. Piłsudskiego 18"
                     className="w-full"
                   />
                   <div className="px-6 py-5 flex items-center justify-between flex-wrap gap-4">
                     <div className="flex items-center gap-3">
                       <MapPin size={16} className="text-terracotta flex-shrink-0" />
                       <span className="text-espresso/60 text-sm">
-                        ul. Piłsudskiego 18, 34-700 Rabka-Zdrój
+                        {CONTACT.address.full}
                       </span>
                     </div>
                     <a
-                      href="https://maps.google.com/?q=Sielska+Chata+Rabka-Zdrój"
+                      href={CONTACT.maps.googleMaps}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-heading font-semibold text-terracotta text-sm hover:underline link-lift"
