@@ -177,11 +177,11 @@ function About() {
             </h2>
 
             <p className="text-espresso/55 text-lg leading-relaxed max-w-[58ch] mb-8">
-              Mamy szeroką kartę — i nie wstydzimy się tego. Przy jednym stole siedzą dzieci z klopskami i frytkami, rodzice z jagnięciną albo sandaczem w sosie borowikowym, dziadkowie z rosołem. Każdy wychodzi syty, nikt nie musi kompromisować.
+              Mamy szeroką kartę — i nie wstydzimy się tego. Przy jednym stole siedzą dzieci z klopskami i frytkami, rodzice z jagnięciną albo sandaczem w sosie borowikowym, dziadkowie z rosołem. Każdy wychodzi z tym, co chciał.
             </p>
 
             <p className="text-espresso/55 text-lg leading-relaxed max-w-[58ch] mb-8">
-              Gotujemy tak, jak gotowałoby się dla bliskich. Wchodząc, czujesz zapach — nie ambicję. Siedzimy przy głównej trasie Kraków–Zakopane, 5 minut od Parku Zdrojowego w Rabce-Zdrój.
+              Gotujemy tak, jak gotowałoby się dla bliskich. Wchodzisz — i od razu czujesz, że tu się gotuje. Jesteśmy przy głównej trasie Kraków–Zakopane, 5 minut od Parku Zdrojowego w Rabce-Zdrój.
             </p>
 
             <Link
@@ -241,7 +241,7 @@ function MenuPreview() {
     fetch('/menu.json')
       .then((r) => r.json())
       .then((data) => setCategories(data.categories))
-      .catch(() => {})
+      .catch(() => { })
   }, [])
 
   useEffect(() => {
@@ -347,7 +347,7 @@ function Philosophy() {
         </p>
 
         <p className="text-cream/35 text-base leading-relaxed max-w-lg mx-auto">
-          Sielska Chata to miejsce, gdzie czas zwalnia. Drewniane wnętrze, szeroka karta, duże porcje. Siadasz, zamawiasz bez pośpiechu, a my podajemy to, co gotujemy od lat — uczciwie i z sercem.
+          Sielska Chata to miejsce, gdzie czas zwalnia. Drewniane wnętrze, szeroka karta, duże porcje. Siadasz, zamawiasz bez pośpiechu, a my podajemy to, co gotujemy od lat — uczciwie.
         </p>
       </div>
 
@@ -379,7 +379,7 @@ function EventsTeaser() {
 
   const events = [
     { num: '01', icon: Utensils, title: 'Komunia i chrzciny', desc: 'Ciepłe, rodzinne przyjęcie dla kilkunastu lub kilkudziesięciu gości. Menu dostosowane do dzieci i dorosłych.' },
-    { num: '02', icon: Users, title: 'Urodziny i jubileusze', desc: 'Wyjątkowy wieczór w klimatycznym wnętrzu. Ustalamy menu, dekoracje i wszystkie szczegóły.' },
+    { num: '02', icon: Users, title: 'Urodziny i jubileusze', desc: 'Urodziny w drewnianym wnętrzu — ciepło i bez stresu. Menu, dekoracje, liczba gości — wszystko ustalimy.' },
     { num: '03', icon: UtensilsCrossed, title: 'Imprezy firmowe i bankiety', desc: 'Spotkania integracyjne, kolacje firmowe, bankiety. Obsługa do kilkudziesięciu osób.' },
   ]
 
@@ -546,7 +546,7 @@ function ContactTeaser() {
               Zapraszamy do Sielskiej Chaty w Rabce-Zdrój
             </h2>
             <p className="text-espresso/50 leading-relaxed mb-8">
-              Szukasz gdzie zjeść w Rabce-Zdrój? Czynni codziennie 9:00–19:00. Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
+              Szukasz dobrego miejsca, gdzie zjeść w Rabce-Zdrój? Czynni codziennie 9:00–19:00. Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button href={CONTACT.phone.href} variant="primary" icon={<Phone size={15} />}>

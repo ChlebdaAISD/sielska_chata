@@ -2,10 +2,11 @@ import { useState, useEffect, useRef } from 'react'
 import menuData from '../data/menu.json'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Phone, ArrowRight, UtensilsCrossed } from 'lucide-react'
+import { Phone, ArrowRight, UtensilsCrossed, ExternalLink } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
 import Button from '../components/Button'
 import GalleryLightbox from '../components/GalleryLightbox'
+import { CONTACT } from '../data/contact'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -97,7 +98,41 @@ export default function Menu() {
                 {cat.name}
               </button>
             ))}
+            <button
+              onClick={() => setActive(categories.length)}
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                active === categories.length
+                  ? 'bg-terracotta text-cream shadow-[0_4px_16px_-4px_rgba(180,80,50,0.35)]'
+                  : 'bg-terracotta/10 text-terracotta hover:bg-terracotta/20'
+              }`}
+            >
+              Danie dnia
+            </button>
           </div>
+
+          {/* Danie dnia — Facebook CTA */}
+          {active === categories.length && (
+            <div className="py-10 text-center">
+              <div className="bg-warm-white border border-espresso/5 rounded-[2rem] p-10 max-w-md mx-auto">
+                <div className="w-14 h-14 rounded-[1.125rem] bg-terracotta/8 flex items-center justify-center mx-auto mb-6">
+                  <ExternalLink size={24} className="text-terracotta" />
+                </div>
+                <h3 className="font-heading font-bold text-espresso text-xl mb-3">
+                  Danie dnia
+                </h3>
+                <p className="text-espresso/55 text-sm leading-relaxed mb-8">
+                  Danie dnia publikujemy codziennie na naszym profilu na Facebooku. Zapraszamy do śledzenia — tam też najszybciej dowiesz się o aktualnej ofercie i promocjach.
+                </p>
+                <Button
+                  href={CONTACT.social.facebook}
+                  variant="primary"
+                  icon={<ExternalLink size={15} />}
+                >
+                  Zobacz na Facebooku
+                </Button>
+              </div>
+            </div>
+          )}
 
           {/* Menu items — all categories rendered for SEO; only active one visible */}
           {categories.map((cat, i) => (
