@@ -14,14 +14,15 @@ export default function Footer() {
               <img src="/images/logo.jpg" alt="Sielska Chata" className="h-12 w-12 rounded-full object-cover" />
               <span className="font-drama text-cream text-xl font-semibold">Sielska Chata</span>
             </div>
-            <p className="text-cream/30 text-sm leading-relaxed max-w-sm">
+            <p className="text-cream/65 text-sm leading-relaxed max-w-sm">
               Restauracja z kuchnią polską i europejską w uzdrowiskowej Rabce-Zdrój. Szeroka karta, duże porcje, drewniane wnętrze i organizacja imprez okolicznościowych.
             </p>
           </div>
           <div className="md:col-span-3">
-            <h4 className="font-heading font-bold text-cream/60 text-xs tracking-wider uppercase mb-5">Nawigacja</h4>
+            <h4 className="font-heading font-bold text-cream/75 text-xs tracking-wider uppercase mb-5">Nawigacja</h4>
             <div className="space-y-3">
               {[
+                { label: 'Strona główna', href: '/' },
                 { label: 'Menu', href: '/menu/' },
                 { label: 'O nas', href: '/o-nas/' },
                 { label: 'Imprezy', href: '/imprezy/' },
@@ -30,7 +31,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block text-cream/35 text-sm hover:text-terracotta transition-colors duration-300 link-lift"
+                  className="block text-cream/65 text-sm hover:text-terracotta transition-colors duration-300 link-lift"
                 >
                   {link.label}
                 </Link>
@@ -38,27 +39,27 @@ export default function Footer() {
             </div>
           </div>
           <div className="md:col-span-4">
-            <h4 className="font-heading font-bold text-cream/60 text-xs tracking-wider uppercase mb-5">Kontakt</h4>
+            <h4 className="font-heading font-bold text-cream/75 text-xs tracking-wider uppercase mb-5">Kontakt</h4>
             <div className="space-y-3 text-sm">
-              <p className="text-cream/35">ul. Piłsudskiego 18</p>
-              <p className="text-cream/35">34-700 Rabka-Zdrój</p>
+              <p className="text-cream/65">ul. Piłsudskiego 18</p>
+              <p className="text-cream/65">34-700 Rabka-Zdrój</p>
               <a href="tel:+48780285859" className="block text-terracotta hover:underline font-semibold">
                 +48 780 285 859
               </a>
-              <p className="text-cream/35">Codziennie 9:00–19:00</p>
+              <p className="text-cream/65">Codziennie 9:00–19:00</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-cream/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-cream/20 text-xs font-mono">
+          <p className="text-cream/45 text-xs font-mono">
             &copy; {new Date().getFullYear()} Sielska Chata — restauracja w Rabce-Zdrój
           </p>
           <a
             href="https://aisolutions.design"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cream/15 text-xs font-mono hover:text-cream/30 transition-colors"
+            className="text-cream/35 text-xs font-mono hover:text-cream/60 transition-colors"
           >
             aisolutions.design
           </a>

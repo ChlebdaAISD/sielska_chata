@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Phone, MapPin, Clock, Car, ArrowRight } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
+import Button from '../components/Button'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -109,16 +110,9 @@ export default function Contact() {
                 ))}
               </div>
 
-              <a
-                href="tel:+48780285859"
-                className="btn-magnetic group inline-flex items-center gap-3 bg-terracotta text-white pl-7 pr-3.5 py-3.5 rounded-full font-semibold"
-              >
-                <span className="btn-bg bg-terracotta-dark rounded-full" />
-                <span className="relative z-10">Zadzwoń teraz</span>
-                <span className="relative z-10 w-9 h-9 rounded-full bg-white/15 flex items-center justify-center transition-transform duration-500 group-hover:translate-x-0.5 group-hover:scale-105">
-                  <Phone size={15} />
-                </span>
-              </a>
+              <Button href="tel:+48780285859" variant="primary" icon={<Phone size={15} />}>
+                Zadzwoń teraz
+              </Button>
             </div>
 
             {/* Map */}

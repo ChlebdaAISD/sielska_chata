@@ -7,6 +7,7 @@ import {
   UtensilsCrossed, Award, Utensils, ArrowRight, Star
 } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
+import Button from '../components/Button'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -72,22 +73,12 @@ function Hero() {
             </p>
 
             <div className="hero-cta flex flex-wrap gap-4">
-              <a
-                href="tel:+48780285859"
-                className="btn-magnetic group inline-flex items-center gap-3 bg-terracotta text-white pl-7 pr-3 py-3.5 rounded-full font-semibold text-base"
-              >
-                <span className="btn-bg bg-terracotta-dark rounded-full" />
-                <span className="relative z-10">Zarezerwuj stolik</span>
-                <span className="relative z-10 w-9 h-9 rounded-full bg-white/15 flex items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:scale-105">
-                  <Phone size={16} />
-                </span>
-              </a>
-              <Link
-                href="/menu/"
-                className="btn-magnetic inline-flex items-center gap-2 border border-white/25 text-white px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/10 transition-colors duration-500"
-              >
-                <span className="relative z-10">Zobacz menu</span>
-              </Link>
+              <Button href="tel:+48780285859" variant="primary" icon={<Phone size={16} />}>
+                Zarezerwuj stolik
+              </Button>
+              <Button to="/menu/" variant="secondary-dark">
+                Zobacz menu
+              </Button>
             </div>
           </div>
 
@@ -310,16 +301,9 @@ function MenuPreview() {
         )}
 
         <div className="text-center">
-          <Link
-            href="/menu/"
-            className="btn-magnetic group inline-flex items-center gap-3 bg-espresso text-cream pl-6 pr-3 py-3.5 rounded-full font-semibold"
-          >
-            <span className="btn-bg bg-terracotta rounded-full" />
-            <span className="relative z-10">Zobacz pełne menu</span>
-            <span className="relative z-10 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
-              <ArrowRight size={14} />
-            </span>
-          </Link>
+          <Button to="/menu/" variant="primary-dark" icon={<ArrowRight size={14} />}>
+            Zobacz pełne menu
+          </Button>
           <p className="text-espresso/30 text-xs font-mono mt-4">Dostępne również jedzenie na wynos</p>
         </div>
       </div>
@@ -431,16 +415,9 @@ function EventsTeaser() {
         </div>
 
         <div className="text-center">
-          <Link
-            href="/imprezy/"
-            className="btn-magnetic group inline-flex items-center gap-3 bg-terracotta text-white pl-6 pr-3 py-3.5 rounded-full font-semibold"
-          >
-            <span className="btn-bg bg-terracotta-dark rounded-full" />
-            <span className="relative z-10">Sprawdź ofertę imprez</span>
-            <span className="relative z-10 w-8 h-8 rounded-full bg-white/15 flex items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
-              <ArrowRight size={14} />
-            </span>
-          </Link>
+          <Button to="/imprezy/" variant="primary" icon={<ArrowRight size={14} />}>
+            Sprawdź ofertę imprez
+          </Button>
         </div>
       </div>
     </section>
@@ -571,22 +548,12 @@ function ContactTeaser() {
               Restauracja czynna codziennie 9:00–19:00. Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="tel:+48780285859"
-                className="btn-magnetic group inline-flex items-center gap-3 bg-terracotta text-white pl-7 pr-3.5 py-3.5 rounded-full font-semibold"
-              >
-                <span className="btn-bg bg-terracotta-dark rounded-full" />
-                <span className="relative z-10">+48 780 285 859</span>
-                <span className="relative z-10 w-9 h-9 rounded-full bg-white/15 flex items-center justify-center">
-                  <Phone size={15} />
-                </span>
-              </a>
-              <Link
-                href="/kontakt/"
-                className="inline-flex items-center gap-2 border border-espresso/15 text-espresso px-7 py-3.5 rounded-full font-semibold hover:bg-espresso/5 transition-colors"
-              >
+              <Button href="tel:+48780285859" variant="primary" icon={<Phone size={15} />}>
+                +48 780 285 859
+              </Button>
+              <Button to="/kontakt/" variant="secondary">
                 Jak dojechać <ArrowRight size={15} />
-              </Link>
+              </Button>
             </div>
           </div>
 

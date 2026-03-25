@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link } from 'wouter'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Phone, ArrowRight, UtensilsCrossed } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
+import Button from '../components/Button'
+import GalleryLightbox from '../components/GalleryLightbox'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -56,7 +57,7 @@ export default function Menu() {
       {/* Hero banner */}
       <section className="relative pt-40 pb-20 px-6 md:px-16 lg:px-24 bg-espresso overflow-hidden">
         <MountainSilhouette className="absolute bottom-0 left-0 w-full h-16 md:h-20" color="#FAF7F2" />
-        <div className="max-w-[900px] mx-auto relative z-10">
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="parzenica-divider text-terracotta w-fit mb-6">
             <span className="font-mono text-xs tracking-[0.25em] uppercase">Karta dań</span>
           </div>
@@ -159,6 +160,29 @@ export default function Menu() {
         </div>
       </section>
 
+      {/* Dish gallery — placeholder images, client will supply final photos */}
+      <section className="py-16 md:py-20 px-6 md:px-16 lg:px-24 bg-background">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="text-center mb-10">
+            <div className="parzenica-divider text-terracotta mx-auto w-fit mb-6">
+              <span className="font-mono text-xs tracking-[0.25em] uppercase">Galeria</span>
+            </div>
+            <h2 className="font-drama italic text-espresso text-2xl md:text-3xl">
+              Nasze dania
+            </h2>
+          </div>
+          <GalleryLightbox
+            images={[
+              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 1' },
+              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 2' },
+              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 3' },
+              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 4' },
+              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 5' },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* Takeout CTA */}
       <section className="py-20 px-6 md:px-16 lg:px-24 bg-background">
         <div className="max-w-[900px] mx-auto text-center">
@@ -169,22 +193,12 @@ export default function Menu() {
             Zamów telefonicznie, przyjdź i odbierz. Czynni codziennie 9:00–19:00.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="tel:+48780285859"
-              className="btn-magnetic group inline-flex items-center gap-3 bg-terracotta text-white pl-7 pr-3.5 py-3.5 rounded-full font-semibold"
-            >
-              <span className="btn-bg bg-terracotta-dark rounded-full" />
-              <span className="relative z-10">Zadzwoń i zamów</span>
-              <span className="relative z-10 w-9 h-9 rounded-full bg-white/15 flex items-center justify-center">
-                <Phone size={15} />
-              </span>
-            </a>
-            <Link
-              href="/kontakt/"
-              className="inline-flex items-center gap-2 border border-espresso/15 text-espresso px-7 py-3.5 rounded-full font-semibold hover:bg-espresso/5 transition-colors"
-            >
+            <Button href="tel:+48780285859" variant="primary" icon={<Phone size={15} />}>
+              Zadzwoń i zamów
+            </Button>
+            <Button to="/kontakt/" variant="secondary">
               Jak dojechać <ArrowRight size={15} />
-            </Link>
+            </Button>
           </div>
         </div>
       </section>

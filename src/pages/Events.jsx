@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react'
-import { Link } from 'wouter'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Phone, Users, ArrowRight, CheckCircle } from 'lucide-react'
+import { Phone, Users, CheckCircle } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
+import Button from '../components/Button'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -109,16 +109,9 @@ function EventCard({ event, index }) {
           ))}
         </ul>
 
-        <a
-          href="tel:+48780285859"
-          className="btn-magnetic group inline-flex items-center gap-3 bg-terracotta text-white pl-6 pr-3 py-3 rounded-full font-semibold text-sm"
-        >
-          <span className="btn-bg bg-terracotta-dark rounded-full" />
-          <span className="relative z-10">Zapytaj o termin</span>
-          <span className="relative z-10 w-8 h-8 rounded-full bg-white/15 flex items-center justify-center transition-transform duration-500 group-hover:translate-x-0.5">
-            <Phone size={14} />
-          </span>
-        </a>
+        <Button href="tel:+48780285859" variant="primary" size="sm" icon={<Phone size={14} />}>
+          Zapytaj o termin
+        </Button>
       </div>
 
       {/* Visual card */}
@@ -214,19 +207,13 @@ export default function Events() {
                 a: 'Tak — dysponujemy dużym, bezpłatnym parkingiem. Goście przyjeżdżający z całej Małopolski nie mają problemów z miejscem.',
               },
             ].map((faq) => (
-              <details
+              <div
                 key={faq.q}
-                className="group bg-warm-white border border-espresso/5 rounded-[1.5rem] overflow-hidden"
+                className="bg-warm-white border border-espresso/5 rounded-[1.5rem] px-7 py-6"
               >
-                <summary className="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer font-heading font-bold text-espresso list-none">
-                  {faq.q}
-                  <ArrowRight
-                    size={16}
-                    className="flex-shrink-0 text-terracotta transition-transform duration-300 group-open:rotate-90"
-                  />
-                </summary>
-                <p className="px-7 pb-6 text-espresso/55 leading-relaxed text-sm">{faq.a}</p>
-              </details>
+                <h3 className="font-heading font-bold text-espresso mb-3">{faq.q}</h3>
+                <p className="text-espresso/55 leading-relaxed text-sm">{faq.a}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -242,16 +229,9 @@ export default function Events() {
           <p className="text-cream/45 mb-8 max-w-md mx-auto">
             Zadzwoń do nas — ustalimy datę, menu i wszystkie szczegóły Twojej uroczystości.
           </p>
-          <a
-            href="tel:+48780285859"
-            className="btn-magnetic group inline-flex items-center gap-3 bg-terracotta text-white pl-7 pr-3.5 py-4 rounded-full font-semibold text-lg"
-          >
-            <span className="btn-bg bg-terracotta-dark rounded-full" />
-            <span className="relative z-10">+48 780 285 859</span>
-            <span className="relative z-10 w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
-              <Phone size={18} />
-            </span>
-          </a>
+          <Button href="tel:+48780285859" variant="primary" size="lg" icon={<Phone size={18} />}>
+            +48 780 285 859
+          </Button>
         </div>
       </section>
     </>

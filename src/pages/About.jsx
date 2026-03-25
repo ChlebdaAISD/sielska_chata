@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Phone, ArrowRight, Award, Star, ChefHat, Mountain } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
+import Button from '../components/Button'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -142,22 +143,12 @@ export default function About() {
             ul. Piłsudskiego 18, Rabka-Zdrój. Czynni codziennie 9:00–19:00.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="tel:+48780285859"
-              className="btn-magnetic group inline-flex items-center gap-3 bg-terracotta text-white pl-7 pr-3.5 py-3.5 rounded-full font-semibold"
-            >
-              <span className="btn-bg bg-terracotta-dark rounded-full" />
-              <span className="relative z-10">Zadzwoń do nas</span>
-              <span className="relative z-10 w-9 h-9 rounded-full bg-white/15 flex items-center justify-center">
-                <Phone size={15} />
-              </span>
-            </a>
-            <Link
-              href="/menu/"
-              className="inline-flex items-center gap-2 border border-espresso/15 text-espresso px-7 py-3.5 rounded-full font-semibold hover:bg-espresso/5 transition-colors"
-            >
+            <Button href="tel:+48780285859" variant="primary" icon={<Phone size={15} />}>
+              Zadzwoń do nas
+            </Button>
+            <Button to="/menu/" variant="secondary">
               Zobacz menu <ArrowRight size={15} />
-            </Link>
+            </Button>
           </div>
         </div>
       </section>

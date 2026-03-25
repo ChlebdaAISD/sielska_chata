@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'wouter'
 import { Phone, Menu as MenuIcon, X } from 'lucide-react'
+import Button from './Button'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -19,6 +20,7 @@ export default function Navbar() {
   }, [location])
 
   const links = [
+    { label: 'Strona główna', href: '/' },
     { label: 'Menu', href: '/menu/' },
     { label: 'O nas', href: '/o-nas/' },
     { label: 'Imprezy', href: '/imprezy/' },
@@ -64,14 +66,10 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="tel:+48780285859"
-            className="btn-magnetic ml-2 inline-flex items-center gap-2 bg-terracotta text-white px-5 py-2.5 rounded-full text-sm font-semibold"
-          >
-            <span className="btn-bg bg-terracotta-dark rounded-full" />
-            <Phone size={14} className="relative z-10" />
-            <span className="relative z-10">Zadzwoń</span>
-          </a>
+          <Button href="tel:+48780285859" variant="primary" size="sm" className="ml-2">
+            <Phone size={14} />
+            Zadzwoń
+          </Button>
         </div>
 
         <button
@@ -115,13 +113,10 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="tel:+48780285859"
-            className="btn-magnetic mt-4 inline-flex items-center gap-3 bg-terracotta text-white px-8 py-4 rounded-full text-lg font-semibold"
-          >
+          <Button href="tel:+48780285859" variant="primary" size="lg" className="mt-4">
             <Phone size={18} />
             +48 780 285 859
-          </a>
+          </Button>
         </div>
       </div>
     </>

@@ -1,4 +1,5 @@
-import { Router, Route, Switch } from 'wouter'
+import { useEffect } from 'react'
+import { Router, Route, Switch, useLocation } from 'wouter'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -8,10 +9,19 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import './index.css'
 
+function ScrollToTop() {
+  const [location] = useLocation()
+  useEffect(() => {
+    if (typeof window !== 'undefined') window.scrollTo(0, 0)
+  }, [location])
+  return null
+}
+
 function App({ ssrPath }) {
   return (
     <Router ssrPath={ssrPath}>
       <div className="noise-overlay">
+        <ScrollToTop />
         <Navbar />
         <Switch>
           <Route path="/" component={Home} />
