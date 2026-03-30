@@ -173,15 +173,15 @@ function About() {
             </div>
 
             <h2 className="font-drama italic text-espresso text-3xl md:text-4xl lg:text-5xl leading-snug mb-8">
-              Restauracja rodzinna z szeroką kartą — drewniane wnętrze, uczciwa kuchnia.
+              Rodzinna restauracja, drewniane wnętrze i uczciwa kuchnia z długą listą pyszności.
             </h2>
 
             <p className="text-espresso/55 text-lg leading-relaxed max-w-[58ch] mb-8">
-              Mamy szeroką kartę — i nie wstydzimy się tego. Przy jednym stole siedzą dzieci z klopskami i frytkami, rodzice z jagnięciną albo sandaczem w sosie borowikowym, dziadkowie z rosołem. Każdy wychodzi z tym, co chciał.
+              Nasze obszerne menu to nasz największy atut. Dbamy o to, by łącząc pokolenia przy jednym stole, zadowolić każdy gust: od ulubionych przez dzieci klopsików i frytek, przez wykwintną jagnięciną dla rodziców, aż po domowy rosół dla dziadków. Każdy gość wychodzi od nas najedzony i uśmiechnięty.
             </p>
 
             <p className="text-espresso/55 text-lg leading-relaxed max-w-[58ch] mb-8">
-              Gotujemy tak, jak gotowałoby się dla bliskich. Wchodzisz — i od razu czujesz, że tu się gotuje. Jesteśmy przy głównej trasie Kraków–Zakopane, 5 minut od Parku Zdrojowego w Rabce-Zdrój.
+              Wkładamy w gotowanie całe serce, traktując gości jak bliskich. Zrób sobie przerwę w podróży pod Tatry – mieścimy się przy trasie Kraków–Zakopane, tylko 5 minut od Parku Zdrojowego w Rabce-Zdroju.
             </p>
 
             <Link

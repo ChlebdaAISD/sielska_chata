@@ -72,15 +72,15 @@ export default function About() {
           <div className="about-section grid md:grid-cols-12 gap-12 items-start mb-20">
             <div className="md:col-span-7">
               <h2 className="font-drama italic text-espresso text-3xl md:text-4xl leading-snug mb-8">
-                Restauracja, gdzie przy jednym stole zadowolisz całą rodzinę
+                Rodzinna restauracja, drewniane wnętrze i uczciwa kuchnia z długą listą pyszności.
               </h2>
 
               <p className="text-espresso/55 text-lg leading-relaxed mb-6">
-                Sielska Chata to restauracja w centrum Rabki-Zdrój, przy głównej trasie Kraków–Zakopane. Prowadzimy ją z myślą o gościach, którzy chcą zjeść dobrze — bez poszukiwania wyjątkowych odkryć kulinarnych, ale z pewnością solidnego, uczciwego posiłku.
+                Wkładamy w gotowanie całe serce, traktując gości jak bliskich. Zrób sobie przerwę w podróży pod Tatry – mieścimy się przy trasie Kraków–Zakopane, tylko 5 minut od Parku Zdrojowego w Rabce-Zdroju.
               </p>
 
               <p className="text-espresso/55 text-lg leading-relaxed mb-6">
-                Nasza karta jest szeroka celowo. Przy jednym stole może siedzieć dziecko zamawiające klopsiki z frytkami, rodzic wybierający kotlet z jagnięciny albo sandacza w sosie borowikowym, i dziadek z rosołem z kaczki. Każdy wychodzi syty i zadowolony — i to jest nasz cel.
+                Sielska Chata to restauracja w centrum Rabki-Zdrój. Prowadzimy ją z myślą o gościach, którzy chcą zjeść dobrze — bez poszukiwania wyjątkowych odkryć kulinarnych, ale z pewnością solidnego, uczciwego posiłku.
               </p>
 
               <p className="text-espresso/55 text-lg leading-relaxed mb-6">
