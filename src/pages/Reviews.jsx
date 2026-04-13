@@ -101,7 +101,7 @@ export default function Reviews() {
           </div>
           <h1 className="font-heading text-cream text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter leading-none mb-6">
             Opinie o Sielskiej Chacie —<br />
-            <span className="text-terracotta">Google 4.7/5, Orły Gastronomii 8.9</span>
+            <span className="text-terracotta">Google 4.6/5, Orły Gastronomii 8.9</span>
           </h1>
           <p className="text-cream/55 text-lg leading-relaxed max-w-2xl">
             Co mówią nasi goście? Sprawdź autentyczne opinie z Google i przekonaj się, dlaczego warto nas odwiedzić.
@@ -114,7 +114,7 @@ export default function Reviews() {
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
             <div className="reviews-stat bg-white border border-stone-100 rounded-xl p-8 text-center shadow-sm">
-              <div className="font-heading text-5xl font-extrabold text-espresso mb-2">4.7</div>
+              <div className="font-heading text-5xl font-extrabold text-espresso mb-2">4.6</div>
               <div className="flex justify-center gap-1 mb-3">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} size={16} className="fill-terracotta text-terracotta" />
@@ -123,7 +123,7 @@ export default function Reviews() {
               <p className="font-mono text-xs uppercase tracking-widest text-stone-400">Średnia ocena Google</p>
             </div>
             <div className="reviews-stat bg-white border border-stone-100 rounded-xl p-8 text-center shadow-sm flex flex-col items-center justify-center">
-              <div className="font-heading text-4xl font-extrabold text-espresso mb-2">76+ opinii</div>
+              <div className="font-heading text-4xl font-extrabold text-espresso mb-2">96+ opinii</div>
               <p className="font-mono text-xs uppercase tracking-widest text-stone-400">Na Google Business</p>
             </div>
             <div className="reviews-stat bg-white border border-stone-100 rounded-xl p-8 text-center shadow-sm flex flex-col items-center justify-center">

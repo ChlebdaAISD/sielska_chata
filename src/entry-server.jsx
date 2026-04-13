@@ -11,8 +11,8 @@ const reviewsSchema = {
   url: DOMAIN,
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.7',
-    reviewCount: '76',
+    ratingValue: '4.6',
+    reviewCount: '96',
     bestRating: '5',
   },
   review: reviewsData.map((r) => ({
@@ -67,8 +67,8 @@ const routesMeta = {
     ],
   },
   '/opinie/': {
-    title: 'Opinie — Sielska Chata | Google 4.7/5, Orły Gastronomii 8.9',
-    description: 'Przeczytaj opinie gości Sielskiej Chaty w Rabce-Zdrój. Ocena 4.7/5 na Google (76 opinii). Laureaci Orłów Gastronomii 2026 z oceną 8.9. Zostaw swoją opinię.',
+    title: 'Opinie — Sielska Chata | Google 4.6/5, Orły Gastronomii 8.9',
+    description: 'Przeczytaj opinie gości Sielskiej Chaty w Rabce-Zdrój. Ocena 4.6/5 na Google (96 opinii). Laureaci Orłów Gastronomii 2026 z oceną 8.9. Zostaw swoją opinię.',
     canonical: `${DOMAIN}/opinie/`,
     breadcrumb: [
       { name: 'Sielska Chata', url: `${DOMAIN}/` },

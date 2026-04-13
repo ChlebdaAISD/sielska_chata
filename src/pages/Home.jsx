@@ -117,7 +117,7 @@ function AwardsBanner() {
   }, [])
 
   const awards = [
-    { value: '4.7', label: 'Google Maps', sub: '76 opinii' },
+    { value: '4.6', label: 'Google Maps', sub: '96 opinii' },
     { value: '8.9', label: 'Orły Gastronomii', sub: 'Laureat 2026' },
     { value: CONTACT.hours.short, label: 'Czynni', sub: 'Codziennie' },
     { value: 'Duży', label: 'Parking', sub: 'Bezpłatny' },
@@ -494,7 +494,7 @@ function Testimonials() {
             Co mówią o nas
           </h2>
           <div className="flex items-center justify-center gap-3 text-espresso/40 mt-4">
-            <span className="font-mono text-xs">Google 4.7/5</span>
+            <span className="font-mono text-xs">Google 4.6/5</span>
             <span className="w-1 h-1 rounded-full bg-espresso/20" />
             <span className="font-mono text-xs">Orły Gastronomii 8.9/10</span>
           </div>
