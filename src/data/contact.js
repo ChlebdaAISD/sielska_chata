@@ -24,11 +24,15 @@ export const CONTACT = {
 
   hours: {
     /** Full display string */
-    display: 'Codziennie 9:00–19:00',
+    display: 'Pon.–Pt. 12:00–22:00, Sob. 12:00–01:00, Niedz. 12:00–22:00',
     /** Short version for compact UI */
-    short: '9:00–19:00',
-    /** Subtitle line */
-    days: '7 dni w tygodniu',
+    short: '12:00–22:00 / 01:00',
+    /** Detailed schedule for list views */
+    schedule: [
+      { days: 'Poniedziałek – Piątek', time: '12:00 – 22:00' },
+      { days: 'Sobota', time: '12:00 – 01:00' },
+      { days: 'Niedziela', time: '12:00 – 22:00' },
+    ],
   },
 
   social: {

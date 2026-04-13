@@ -47,7 +47,7 @@ const eventTypes = [
       'Indywidualne menu na zamówienie',
       'Możliwość wniesienia własnego tortu',
       'Kuchnia polska i europejska — szeroki wybór dla każdego',
-      'Czynni codziennie 9:00–19:00',
+      'Czynni codziennie od 12:00',
     ],
   },
   {
@@ -86,9 +86,8 @@ function EventCard({ event, index }) {
     <article
       ref={ref}
       id={event.id}
-      className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center py-16 md:py-20 border-t border-espresso/8 ${
-        index % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''
-      }`}
+      className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center py-16 md:py-20 border-t border-espresso/8 ${index % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''
+        }`}
     >
       {/* Text */}
       <div>
@@ -142,7 +141,7 @@ const faqSchema = {
       name: 'Jak zarezerwować salę na imprezę w Sielskiej Chacie?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `Najprościej zadzwoń pod numer ${CONTACT.phone.display}. Omówimy datę, liczbę gości i rodzaj imprezy. Możesz też wpaść osobiście — jesteśmy czynni ${CONTACT.hours.display}.`,
+        text: `Najprościej zadzwoń pod numer ${CONTACT.phone.display}. Omówimy datę, liczbę gości i rodzaj imprezy. Możesz też wpaść osobiście — ${CONTACT.hours.display}.`,
       },
     },
     {
@@ -236,7 +235,7 @@ export default function Events() {
             {[
               {
                 q: 'Jak zarezerwować salę na imprezę w Sielskiej Chacie?',
-                a: `Najprościej zadzwoń pod numer ${CONTACT.phone.display}. Omówimy datę, liczbę gości i rodzaj imprezy. Możesz też wpaść osobiście — jesteśmy czynni ${CONTACT.hours.display}.`,
+                a: `Najprościej zadzwoń pod numer ${CONTACT.phone.display}. Omówimy datę, liczbę gości i rodzaj imprezy. Możesz też wpaść osobiście — ${CONTACT.hours.display}.`,
               },
               {
                 q: 'Na ile osób można zorganizować przyjęcie?',

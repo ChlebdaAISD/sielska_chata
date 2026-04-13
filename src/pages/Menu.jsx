@@ -89,22 +89,20 @@ export default function Menu() {
               <button
                 key={cat.id}
                 onClick={() => setActive(i)}
-                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                  i === active
+                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${i === active
                     ? 'bg-espresso text-cream shadow-[0_4px_16px_-4px_rgba(44,36,24,0.3)]'
                     : 'bg-espresso/5 text-espresso/50 hover:bg-espresso/10 hover:text-espresso/70'
-                }`}
+                  }`}
               >
                 {cat.name}
               </button>
             ))}
             <button
               onClick={() => setActive(categories.length)}
-              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                active === categories.length
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${active === categories.length
                   ? 'bg-terracotta text-cream shadow-[0_4px_16px_-4px_rgba(180,80,50,0.35)]'
                   : 'bg-terracotta/10 text-terracotta hover:bg-terracotta/20'
-              }`}
+                }`}
             >
               Danie dnia
             </button>
@@ -208,7 +206,7 @@ export default function Menu() {
             Jedzenie na wynos — Rabka-Zdrój
           </h2>
           <p className="text-espresso/50 mb-8 max-w-md mx-auto">
-            Zamów telefonicznie, przyjdź i odbierz. Czynni codziennie 9:00–19:00.
+            Zamów telefonicznie, przyjdź i odbierz. {CONTACT.hours.display}.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="tel:+48780285859" variant="primary" icon={<Phone size={15} />}>
