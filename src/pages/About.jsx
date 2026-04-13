@@ -43,7 +43,7 @@ export default function About() {
             <span className="text-terracotta">Rabka-Zdrój</span>
           </h1>
           <p className="text-cream/55 text-lg leading-relaxed max-w-2xl">
-            Restauracja rodzinna w centrum uzdrowiska. Kuchnia polska i europejska, uczciwe gotowanie, drewniane wnętrze — i karta dla każdego apetytu.
+            Restauracja rodzinna w centrum uzdrowiska. Kuchnia polska i europejska, drewniane wnętrze — i karta dla każdego apetytu.
           </p>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function About() {
             {[
               { value: '4.7', label: 'Google Maps', sub: '76 opinii' },
               { value: '8.9', label: 'Orły Gastronomii', sub: 'Laureat 2026' },
-              { value: '9:00–19:00', label: 'Czynni', sub: 'Każdego dnia' },
+              { value: CONTACT.hours.short, label: 'Czynni', sub: 'Codziennie' },
               { value: 'Duży', label: 'Parking', sub: 'Bezpłatny' },
             ].map((a) => (
               <div key={a.label} className="bg-warm-white rounded-[1.5rem] p-6 border border-espresso/5">

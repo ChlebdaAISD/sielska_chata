@@ -119,7 +119,7 @@ function AwardsBanner() {
   const awards = [
     { value: '4.7', label: 'Google Maps', sub: '76 opinii' },
     { value: '8.9', label: 'Orły Gastronomii', sub: 'Laureat 2026' },
-    { value: '9:00–19:00', label: 'Codziennie', sub: '7 dni w tygodniu' },
+    { value: CONTACT.hours.short, label: 'Czynni', sub: 'Codziennie' },
     { value: 'Duży', label: 'Parking', sub: 'Bezpłatny' },
   ]
 
@@ -347,7 +347,7 @@ function Philosophy() {
         </p>
 
         <p className="text-cream/35 text-base leading-relaxed max-w-lg mx-auto">
-          Sielska Chata to miejsce, gdzie czas zwalnia. Drewniane wnętrze, szeroka karta, duże porcje. Siadasz, zamawiasz bez pośpiechu, a my podajemy to, co gotujemy od lat — uczciwie.
+          Sielska Chata to miejsce gdzie czas zwalnia i przenosi Cię w świat wykwintnych rozkoszy naszych dań które przygotowujemy na bieżąco. Drewniane wnętrze, szeroka karta dań (nie tylko regionalnych) sprawia, że każdy nasz klient poczuje się jak w domu.
         </p>
       </div>
 
@@ -545,9 +545,7 @@ function ContactTeaser() {
             <h2 className="font-drama italic text-espresso text-3xl md:text-4xl leading-snug mb-4">
               Zapraszamy do Sielskiej Chaty w Rabce-Zdrój
             </h2>
-            <p className="text-espresso/50 leading-relaxed mb-8">
-              Szukasz dobrego miejsca, gdzie zjeść w Rabce-Zdrój? Czynni codziennie 9:00–19:00. Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
-            </p>
+            Szukasz dobrego miejsca, gdzie zjeść w Rabce-Zdrój? {CONTACT.hours.display}. Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
             <div className="flex flex-wrap gap-4">
               <Button href={CONTACT.phone.href} variant="primary" icon={<Phone size={15} />}>
                 {CONTACT.phone.display}
