@@ -24,6 +24,7 @@ export default function Navbar() {
     { label: 'Menu', href: '/menu/' },
     { label: 'O nas', href: '/o-nas/' },
     { label: 'Imprezy', href: '/imprezy/' },
+    { label: 'Opinie', href: '/opinie/' },
     { label: 'Kontakt', href: '/kontakt/' },
   ]
 

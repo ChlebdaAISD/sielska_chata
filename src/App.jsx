@@ -7,6 +7,7 @@ import Menu from './pages/Menu'
 import Events from './pages/Events'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Reviews from './pages/Reviews'
 import './index.css'
 
 function ScrollToTop() {
@@ -33,6 +34,8 @@ function App({ ssrPath }) {
           <Route path="/o-nas/" component={About} />
           <Route path="/kontakt" component={Contact} />
           <Route path="/kontakt/" component={Contact} />
+          <Route path="/opinie" component={Reviews} />
+          <Route path="/opinie/" component={Reviews} />
           {/* 404 fallback — render Home */}
           <Route component={Home} />
         </Switch>
