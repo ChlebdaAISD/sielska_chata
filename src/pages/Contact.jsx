@@ -43,7 +43,7 @@ export default function Contact() {
             <span className="text-terracotta">Sielska Chata Rabka-Zdrój</span>
           </h1>
           <p className="text-cream/55 text-lg leading-relaxed max-w-2xl">
-            Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie. {CONTACT.hours.display}. Bezpłatny parking przy restauracji.
+            Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie. Bezpłatny parking przy restauracji.
           </p>
         </div>
       </section>

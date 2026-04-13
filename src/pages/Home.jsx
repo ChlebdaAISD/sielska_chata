@@ -545,7 +545,9 @@ function ContactTeaser() {
             <h2 className="font-drama italic text-espresso text-3xl md:text-4xl leading-snug mb-4">
               Zapraszamy do Sielskiej Chaty w Rabce-Zdrój
             </h2>
-            Szukasz dobrego miejsca, gdzie zjeść w Rabce-Zdrój? {CONTACT.hours.display}. Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
+            <p className="text-espresso/50 leading-relaxed mb-8">
+              Szukasz dobrego miejsca, gdzie zjeść w Rabce-Zdrój? Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
+            </p>
             <div className="flex flex-wrap gap-4">
               <Button href={CONTACT.phone.href} variant="primary" icon={<Phone size={15} />}>
                 {CONTACT.phone.display}
