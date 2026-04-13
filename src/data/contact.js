@@ -49,5 +49,5 @@ export const CONTACT = {
     longitude: 19.96110,
   },
 
-  website: 'https://sielskachata.pl',
+  website: 'https://www.sielskachatarabka.pl',
 }

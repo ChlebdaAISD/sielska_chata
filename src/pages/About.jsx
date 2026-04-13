@@ -55,7 +55,7 @@ export default function About() {
           {/* Awards row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
             {[
-              { value: '4.7', label: 'Google Maps', sub: '76 opinii' },
+              { value: '4.6', label: 'Google Maps', sub: '96 opinii' },
               { value: '8.9', label: 'Orły Gastronomii', sub: 'Laureat 2026' },
               { value: CONTACT.hours.short, label: 'Czynni', sub: 'Codziennie' },
               { value: 'Duży', label: 'Parking', sub: 'Bezpłatny' },
@@ -88,7 +88,7 @@ export default function About() {
               </p>
 
               <p className="text-espresso/55 text-lg leading-relaxed">
-                Orły Gastronomii 2026 — ocena 8.9. Na Google Maps 4.7 z ponad 76 recenzji. Oba cieszą, ale bardziej liczy się to, co czujesz wychodząc — i czy wróciłbyś w przyszłym tygodniu.
+                Orły Gastronomii 2026 — ocena 8.9. Na Google Maps 4.6 z ponad 96 recenzji. Oba cieszą, ale bardziej liczy się to, co czujesz wychodząc — i czy wróciłbyś w przyszłym tygodniu.
               </p>
             </div>
 
@@ -102,7 +102,7 @@ export default function About() {
                 {
                   icon: Award,
                   title: 'Laureat Orłów Gastronomii 2026',
-                  text: 'Ocena 8.9/10 w prestiżowym rankingu gastronomicznym. Google Maps 4.7/5 — 76 opinii gości.',
+                  text: 'Ocena 8.9/10 w prestiżowym rankingu gastronomicznym. Google Maps 4.6/5 — 96 opinii gości.',
                 },
                 {
                   icon: Mountain,

@@ -73,6 +73,27 @@ async function prerender() {
     const { html: appHtml, meta } = render(routePath)
     let fullHtml = updateMetaTags(template, meta)
 
+    // Inject BreadcrumbList JSON-LD for non-root routes
+    if (meta.breadcrumb && meta.breadcrumb.length > 0) {
+      const breadcrumbSchema = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: meta.breadcrumb.map((item, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: item.name,
+          item: item.url,
+        })),
+      })
+      fullHtml = fullHtml.replace('</head>', `  <script type="application/ld+json">${breadcrumbSchema}</script>\n  </head>`)
+    }
+
+    // Inject any additional route-specific JSON-LD schema
+    if (meta.additionalSchema) {
+      const additionalSchemaStr = JSON.stringify(meta.additionalSchema)
+      fullHtml = fullHtml.replace('</head>', `  <script type="application/ld+json">${additionalSchemaStr}</script>\n  </head>`)
+    }
+
     // Inject rendered React tree
     fullHtml = fullHtml.replace(
       '<div id="root"></div>',
