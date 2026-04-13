@@ -2,7 +2,7 @@ import ReactDOMServer from 'react-dom/server'
 import App from './App'
 import reviewsData from './data/reviews.json'
 
-const DOMAIN = 'https://sielskachata.pl'
+const DOMAIN = 'https://www.sielskachatarabka.pl'
 
 const reviewsSchema = {
   '@context': 'https://schema.org',

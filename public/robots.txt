@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sielskachata.pl/sitemap.xml
+Sitemap: https://www.sielskachatarabka.pl/sitemap.xml
