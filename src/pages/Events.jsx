@@ -86,8 +86,7 @@ function EventCard({ event, index }) {
     <article
       ref={ref}
       id={event.id}
-      className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center py-16 md:py-20 border-t border-espresso/8 ${index % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''
-        }`}
+      className="py-16 md:py-20 border-t border-espresso/8 max-w-3xl"
     >
       {/* Text */}
       <div>
@@ -112,21 +111,6 @@ function EventCard({ event, index }) {
         <Button href={CONTACT.phone.href} variant="primary" size="sm" icon={<Phone size={14} />}>
           Zapytaj o termin
         </Button>
-      </div>
-
-      {/* Visual card */}
-      <div className="bg-espresso/[0.02] border border-espresso/5 rounded-[2rem] p-1.5">
-        <div className="bg-warm-white rounded-[calc(2rem-0.375rem)] p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] min-h-[240px] flex flex-col justify-between">
-          <div className="w-16 h-16 rounded-[1.25rem] bg-terracotta/8 flex items-center justify-center mb-6">
-            <Users size={28} className="text-terracotta" />
-          </div>
-          <div>
-            <p className="font-drama italic text-espresso/60 text-lg leading-relaxed">
-              „Robiliśmy tu komunię córki — 40 osób, zero stresu. Wszystko dopięte na ostatni guzik."
-            </p>
-            <p className="font-mono text-xs text-espresso/60 mt-3">— Anna W., organizacja komunii</p>
-          </div>
-        </div>
       </div>
     </article>
   )
