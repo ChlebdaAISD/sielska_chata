@@ -50,8 +50,8 @@ function Hero() {
       <img
         src="/images/hero.webp"
         alt="Sielska Chata — restauracja w Rabce-Zdrój, kuchnia polska i europejska"
-        width={3089}
-        height={1356}
+        width={1920}
+        height={843}
         className="hero-img absolute inset-0 w-full h-[120%] object-cover object-center"
       />
       <div className="hero-gradient absolute inset-0" />
