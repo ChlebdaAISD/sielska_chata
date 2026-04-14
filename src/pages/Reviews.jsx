@@ -1,9 +1,10 @@
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Star, ExternalLink } from 'lucide-react'
+import { ExternalLink, Star } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
 import Button from '../components/Button'
+import ReviewCard from '../components/ReviewCard'
 import reviewsData from '../data/reviews.json'
 
 if (typeof window !== 'undefined') {
@@ -11,14 +12,6 @@ if (typeof window !== 'undefined') {
 }
 
 const GOOGLE_REVIEWS_URL = 'https://www.google.com/search?q=Sielska+Chata+Rabka-Zdr%C3%B3j+opinie'
-
-function getInitials(name) {
-  return name
-    .split(' ')
-    .slice(0, 2)
-    .map((w) => w[0]?.toUpperCase() ?? '')
-    .join('')
-}
 
 function chunkArray(array, chunkSize) {
   const result = []
@@ -29,39 +22,6 @@ function chunkArray(array, chunkSize) {
 }
 
 const reviewChunks = chunkArray(reviewsData, Math.ceil(reviewsData.length / 3))
-
-function StarRow() {
-  return (
-    <div className="flex gap-0.5">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} size={13} className="fill-terracotta text-terracotta" />
-      ))}
-    </div>
-  )
-}
-
-function ReviewCard({ review }) {
-  const initials = getInitials(review.name)
-  return (
-    <div className="bg-white border border-stone-100 rounded-xl p-5 shadow-sm">
-      <div className="flex items-start gap-3">
-        <div className="shrink-0 w-9 h-9 rounded-full bg-espresso flex items-center justify-center text-cream text-xs font-bold">
-          {initials}
-        </div>
-        <div className="min-w-0">
-          <p className="font-semibold text-espresso text-sm leading-tight">{review.name}</p>
-          <div className="mt-1">
-            <StarRow />
-          </div>
-          <blockquote className="mt-2">
-            <p className="text-stone-600 text-sm leading-relaxed">„{review.review}"</p>
-          </blockquote>
-          <span className="text-stone-400 text-xs font-mono mt-2 block">Opinia z Google</span>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 export default function Reviews() {
   const statsRef = useRef(null)

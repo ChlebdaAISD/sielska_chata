@@ -58,7 +58,7 @@ export default function Contact() {
               <h2 className="font-drama italic text-espresso text-3xl md:text-4xl leading-snug mb-4">
                 Zapraszamy
               </h2>
-              <p className="text-espresso/50 leading-relaxed mb-10">
+              <p className="text-espresso/70 leading-relaxed mb-10">
                 Masz pytanie o menu, chcesz zarezerwować stolik albo porozmawiać o organizacji imprezy? Zadzwoń — odpowiadamy szybko.
               </p>
 
@@ -181,7 +181,7 @@ export default function Contact() {
             ].map((d) => (
               <div key={d.title} className="bg-background rounded-2xl p-6 border border-espresso/5">
                 <h3 className="font-heading font-bold text-espresso mb-2">{d.title}</h3>
-                <p className="text-espresso/50 text-sm leading-relaxed">{d.desc}</p>
+                <p className="text-espresso/70 text-sm leading-relaxed">{d.desc}</p>
               </div>
             ))}
           </div>

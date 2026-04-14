@@ -40,8 +40,10 @@ export default function Navbar() {
       >
         <Link href="/" className="flex items-center gap-2.5">
           <img
-            src="/images/logo.jpg"
+            src="/images/logo.webp"
             alt="Sielska Chata — restauracja w Rabce-Zdrój"
+            width={200}
+            height={200}
             className={`rounded-full object-cover transition-all duration-700 ${scrolled ? 'h-9 w-9' : 'h-11 w-11'}`}
           />
           <span
@@ -93,6 +95,7 @@ export default function Navbar() {
         id="mobile-menu"
         role="dialog"
         aria-modal="true"
+        aria-label="Menu nawigacyjne"
         className={`fixed inset-0 z-30 transition-all duration-500 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}

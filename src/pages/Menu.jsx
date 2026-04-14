@@ -91,7 +91,7 @@ export default function Menu() {
                 onClick={() => setActive(i)}
                 className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${i === active
                     ? 'bg-espresso text-cream shadow-[0_4px_16px_-4px_rgba(44,36,24,0.3)]'
-                    : 'bg-espresso/5 text-espresso/50 hover:bg-espresso/10 hover:text-espresso/70'
+                    : 'bg-espresso/5 text-espresso/70 hover:bg-espresso/10 hover:text-espresso/85'
                   }`}
               >
                 {cat.name}
@@ -154,14 +154,14 @@ export default function Menu() {
                           {entry.name}
                         </h3>
                         {entry.description && (
-                          <p className="text-espresso/40 text-sm mt-0.5">{entry.description}</p>
+                          <p className="text-espresso/65 text-sm mt-0.5">{entry.description}</p>
                         )}
                       </div>
                       <span className="flex-shrink-0 w-px h-4 bg-espresso/10 mx-2 hidden sm:block" />
                       <span className="font-mono text-terracotta font-medium text-sm whitespace-nowrap">
                         {entry.price} zł
                         {entry.priceNote && (
-                          <span className="text-espresso/30 font-normal"> {entry.priceNote}</span>
+                          <span className="text-espresso/60 font-normal"> {entry.priceNote}</span>
                         )}
                       </span>
                     </div>
@@ -189,11 +189,11 @@ export default function Menu() {
           </div>
           <GalleryLightbox
             images={[
-              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 1' },
-              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 2' },
-              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 3' },
-              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 4' },
-              { src: '/images/hero.jpg', alt: 'Danie restauracji Sielska Chata 5' },
+              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 1' },
+              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 2' },
+              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 3' },
+              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 4' },
+              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 5' },
             ]}
           />
         </div>
@@ -205,7 +205,7 @@ export default function Menu() {
           <h2 className="font-drama italic text-espresso text-2xl md:text-3xl mb-4">
             Jedzenie na wynos — Rabka-Zdrój
           </h2>
-          <p className="text-espresso/50 mb-8 max-w-md mx-auto">
+          <p className="text-espresso/70 mb-8 max-w-md mx-auto">
             Zamów telefonicznie, przyjdź i odbierz. {CONTACT.hours.display}.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
