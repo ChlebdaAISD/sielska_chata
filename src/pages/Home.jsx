@@ -21,9 +21,9 @@ function Hero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.4 })
+      const tl = gsap.timeline({ delay: 0.15 })
       tl.from('.hero-badge', { y: 20, opacity: 0, duration: 0.7, ease: 'power3.out' })
-        .from('.hero-title', { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out' }, '-=0.4')
+        .from('.hero-title', { y: 30, duration: 0.8, ease: 'power3.out' }, '-=0.4')
         .from('.hero-subtitle', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5')
         .from('.hero-cta', { y: 20, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
         .from('.hero-scroll', { opacity: 0, duration: 0.6 }, '-=0.2')
@@ -50,8 +50,8 @@ function Hero() {
       <img
         src="/images/hero.webp"
         alt="Sielska Chata — restauracja w Rabce-Zdrój, kuchnia polska i europejska"
-        width={3089}
-        height={1356}
+        width={1920}
+        height={843}
         className="hero-img absolute inset-0 w-full h-[120%] object-cover object-center"
       />
       <div className="hero-gradient absolute inset-0" />
