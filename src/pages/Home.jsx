@@ -21,9 +21,9 @@ function Hero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.4 })
+      const tl = gsap.timeline({ delay: 0.15 })
       tl.from('.hero-badge', { y: 20, opacity: 0, duration: 0.7, ease: 'power3.out' })
-        .from('.hero-title', { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out' }, '-=0.4')
+        .from('.hero-title', { y: 30, duration: 0.8, ease: 'power3.out' }, '-=0.4')
         .from('.hero-subtitle', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5')
         .from('.hero-cta', { y: 20, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
         .from('.hero-scroll', { opacity: 0, duration: 0.6 }, '-=0.2')
