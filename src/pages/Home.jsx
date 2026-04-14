@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
 import Button from '../components/Button'
+import ReviewCard from '../components/ReviewCard'
 import { CONTACT } from '../data/contact'
 
 if (typeof window !== 'undefined') {
@@ -47,8 +48,10 @@ function Hero() {
   return (
     <section ref={heroRef} className="relative min-h-[100dvh] w-full overflow-hidden flex items-end">
       <img
-        src="/images/hero.jpg"
+        src="/images/hero.webp"
         alt="Sielska Chata — restauracja w Rabce-Zdrój, kuchnia polska i europejska"
+        width={3089}
+        height={1356}
         className="hero-img absolute inset-0 w-full h-[120%] object-cover object-center"
       />
       <div className="hero-gradient absolute inset-0" />
@@ -220,7 +223,7 @@ function About() {
                   </div>
                   <div>
                     <h3 className="font-heading font-bold text-espresso mb-1">{item.title}</h3>
-                    <p className="text-espresso/50 text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-espresso/70 text-sm leading-relaxed">{item.text}</p>
                   </div>
                 </div>
               </div>
@@ -271,7 +274,7 @@ function MenuPreview() {
           <h2 className="font-drama italic text-espresso text-3xl md:text-4xl lg:text-5xl mb-4">
             Kuchnia polska i europejska
           </h2>
-          <p className="text-espresso/50 max-w-md mx-auto leading-relaxed">
+          <p className="text-espresso/70 max-w-md mx-auto leading-relaxed">
             Tradycyjne polskie smaki, ryby z górskich potoków, europejskie dania mięsne i szeroka karta napojów. Menu zmienia się sezonowo.
           </p>
         </div>
@@ -285,11 +288,11 @@ function MenuPreview() {
                 style={{ animation: `fadeSlideIn 0.4s cubic-bezier(0.32, 0.72, 0, 1) ${i * 40}ms both` }}
               >
                 <div className="flex-1 min-w-0">
-                  <h4 className="font-heading font-bold text-espresso tracking-tight leading-snug">
+                  <h3 className="font-heading font-bold text-espresso tracking-tight leading-snug">
                     {item.name}
-                  </h4>
+                  </h3>
                   {item.description && (
-                    <p className="text-espresso/40 text-sm mt-0.5">{item.description}</p>
+                    <p className="text-espresso/65 text-sm mt-0.5">{item.description}</p>
                   )}
                 </div>
                 <span className="flex-shrink-0 w-px h-4 bg-espresso/10 mx-2 hidden sm:block" />
@@ -305,7 +308,7 @@ function MenuPreview() {
           <Button to="/menu/" variant="primary-dark" icon={<ArrowRight size={14} />}>
             Zobacz pełne menu
           </Button>
-          <p className="text-espresso/30 text-xs font-mono mt-4">Dostępne również jedzenie na wynos w Rabce-Zdrój</p>
+          <p className="text-espresso/60 text-xs font-mono mt-4">Dostępne również jedzenie na wynos w Rabce-Zdrój</p>
         </div>
       </div>
     </section>
@@ -393,7 +396,7 @@ function EventsTeaser() {
           <h2 className="font-drama italic text-espresso text-3xl md:text-4xl lg:text-5xl mb-4">
             Zorganizuj imprezę w Rabce-Zdrój
           </h2>
-          <p className="text-espresso/50 max-w-xl mx-auto leading-relaxed">
+          <p className="text-espresso/70 max-w-xl mx-auto leading-relaxed">
             Komunia, chrzciny, urodziny, spotkanie firmowe — dostosujemy salę i menu do każdej okazji.
           </p>
         </div>
@@ -408,7 +411,7 @@ function EventsTeaser() {
                 <div>
                   <span className="font-mono text-xs text-terracotta/60">{e.num}</span>
                   <h3 className="font-heading font-bold text-espresso text-lg mt-0.5 mb-2">{e.title}</h3>
-                  <p className="text-espresso/50 text-sm leading-relaxed">{e.desc}</p>
+                  <p className="text-espresso/70 text-sm leading-relaxed">{e.desc}</p>
                 </div>
               </div>
             </div>
@@ -428,43 +431,18 @@ function EventsTeaser() {
 // ─── TESTIMONIALS ────────────────────────────────────────
 const testimonials = [
   {
-    quote: 'Najlepsza kwaśnica jaką jadłem poza domem babci. Porcje ogromne, a obsługa serdeczna jak u rodziny.',
-    name: 'Marek K.',
-    role: 'Turysta z Krakowa',
-    initials: 'MK',
+    name: "Michał Kibil",
+    review: "Przyjechaliśmy zachęceni opiniami z Google’a i w żadnej mierze nie jesteśmy rozczarowani. Tradycyjne polskie jedzenie, choć z pewnym twistem, dostarcza radości w każdym kęsie. Porcje są duże, a ceny bardzo rozsądne. Przemiła obsługa powoduje że obiad je się z przyjemnością."
   },
   {
-    quote: 'Robiliśmy tu komunię córki — 40 osób, zero stresu. Wszystko dopięte, a goście pytali o przepis na sernik.',
-    name: 'Anna W.',
-    role: 'Organizacja komunii',
-    initials: 'AW',
+    name: "Agnieszka Sak-Ciężadło",
+    review: "Super miejsce... Przepyszna czosnkowa - najlepsza jaką jadłam. Schabowy-sztos, placki po zbójnicku- chrupiace a gulasz rewelacja, noga z kaczki z kopytkami - mniam. Obsługa bardzo miła i super sprawna. Polecam"
   },
   {
-    quote: 'Wracamy tu co wakacje. Dzieci uwielbiają naleśniki, my — spokój i widok z okna. Parking ogromny.',
-    name: 'Tomasz i Kasia',
-    role: 'Rodzina na urlopie',
-    initials: 'TK',
-  },
+    name: "Rafal Siudy",
+    review: "Pyszne jedzonko i wspaniałe trunki. Goloneczka, baraninka, żeberka palce lizać! Muszę jeszcze spróbować placka po zbojnicku bo podobno wyśmienity. Polecam serdecznie."
+  }
 ]
-
-function TestimonialCard({ t, large, wide }) {
-  return (
-    <div className={`bg-background border border-espresso/5 rounded-[2rem] ${wide ? 'p-8 md:p-10 md:flex md:items-center md:gap-10' : 'p-7 md:p-9'} shadow-[0_4px_24px_-8px_rgba(44,36,24,0.04)] h-full`}>
-      <p className={`font-drama italic text-espresso/75 leading-relaxed mb-6 ${large ? 'text-lg md:text-xl' : 'text-base'} ${wide ? 'md:mb-0 md:flex-1' : ''}`}>
-        &bdquo;{t.quote}&rdquo;
-      </p>
-      <div className={`flex items-center gap-3 ${wide ? 'flex-shrink-0' : ''}`}>
-        <div className="w-11 h-11 rounded-full bg-terracotta/10 flex items-center justify-center text-terracotta font-heading font-bold text-sm">
-          {t.initials}
-        </div>
-        <div>
-          <p className="font-heading font-bold text-espresso text-sm">{t.name}</p>
-          <p className="font-mono text-espresso/35 text-xs">{t.role}</p>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 function Testimonials() {
   const ref = useRef(null)
@@ -493,23 +471,25 @@ function Testimonials() {
           <h2 className="font-drama italic text-espresso text-3xl md:text-4xl mb-3">
             Co mówią o nas
           </h2>
-          <div className="flex items-center justify-center gap-3 text-espresso/40 mt-4">
+          <div className="flex items-center justify-center gap-3 text-espresso/65 mt-4">
             <span className="font-mono text-xs">Google 4.6/5</span>
             <span className="w-1 h-1 rounded-full bg-espresso/20" />
             <span className="font-mono text-xs">Orły Gastronomii 8.9/10</span>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-12 gap-5">
-          <div className="md:col-span-5 testimonial-card">
-            <TestimonialCard t={testimonials[0]} />
-          </div>
-          <div className="md:col-span-7 testimonial-card">
-            <TestimonialCard t={testimonials[1]} large />
-          </div>
-          <div className="md:col-span-12 testimonial-card">
-            <TestimonialCard t={testimonials[2]} wide />
-          </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <div key={i} className="testimonial-card">
+              <ReviewCard review={t} />
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Button to="/opinie/" variant="secondary">
+            Zobacz wszystkie opinie <ArrowRight size={14} className="ml-2" />
+          </Button>
         </div>
       </div>
     </section>
@@ -545,7 +525,7 @@ function ContactTeaser() {
             <h2 className="font-drama italic text-espresso text-3xl md:text-4xl leading-snug mb-4">
               Zapraszamy do Sielskiej Chaty w Rabce-Zdrój
             </h2>
-            <p className="text-espresso/50 leading-relaxed mb-8">
+            <p className="text-espresso/70 leading-relaxed mb-8">
               Szukasz dobrego miejsca, gdzie zjeść w Rabce-Zdrój? Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.
             </p>
             <div className="flex flex-wrap gap-4">

@@ -124,7 +124,7 @@ function EventCard({ event, index }) {
             <p className="font-drama italic text-espresso/60 text-lg leading-relaxed">
               „Robiliśmy tu komunię córki — 40 osób, zero stresu. Wszystko dopięte na ostatni guzik."
             </p>
-            <p className="font-mono text-xs text-espresso/30 mt-3">— Anna W., organizacja komunii</p>
+            <p className="font-mono text-xs text-espresso/60 mt-3">— Anna W., organizacja komunii</p>
           </div>
         </div>
       </div>
@@ -269,7 +269,7 @@ export default function Events() {
           <h2 className="font-drama italic text-cream text-3xl md:text-4xl mb-4">
             Zaplanuj imprezę w Rabce-Zdrój
           </h2>
-          <p className="text-cream/45 mb-8 max-w-md mx-auto">
+          <p className="text-cream/60 mb-8 max-w-md mx-auto">
             Zadzwoń do nas — ustalimy datę, menu i wszystkie szczegóły Twojej uroczystości.
           </p>
           <Button href={CONTACT.phone.href} variant="primary" size="lg" icon={<Phone size={18} />}>

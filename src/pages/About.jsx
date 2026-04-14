@@ -116,7 +116,7 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="font-heading font-bold text-espresso mb-1">{item.title}</h3>
-                    <p className="text-espresso/50 text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-espresso/70 text-sm leading-relaxed">{item.text}</p>
                   </div>
                 </div>
               ))}
@@ -140,7 +140,7 @@ export default function About() {
           <h2 className="font-drama italic text-espresso text-3xl mb-4">
             Zapraszamy do Sielskiej Chaty
           </h2>
-          <p className="text-espresso/50 mb-8 max-w-md mx-auto">
+          <p className="text-espresso/70 mb-8 max-w-md mx-auto">
             {CONTACT.address.full}. {CONTACT.hours.display}.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
