@@ -49,7 +49,7 @@ function Hero() {
     <section ref={heroRef} className="relative min-h-[100dvh] w-full overflow-hidden flex items-end">
       <img
         src="/images/hero.webp"
-        alt="Sielska Chata — restauracja w Rabce-Zdrój, kuchnia polska i europejska"
+        alt="Sielska Chata — restauracja Rabka-Zdrój, kuchnia polska i europejska"
         width={1920}
         height={843}
         className="hero-img absolute inset-0 w-full h-[120%] object-cover object-center"
@@ -69,7 +69,7 @@ function Hero() {
             <h1 className="hero-title font-heading text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter leading-none mb-5">
               Sielska Chata —
               <br />
-              Restauracja w Rabce-Zdrój
+              Restauracja Rabka-Zdrój
             </h1>
 
             <p className="hero-subtitle font-drama italic text-cream/85 text-xl md:text-3xl lg:text-4xl mb-10">
@@ -394,7 +394,7 @@ function EventsTeaser() {
             <span className="font-mono text-xs tracking-[0.25em] uppercase">Imprezy okolicznościowe</span>
           </div>
           <h2 className="font-drama italic text-espresso text-3xl md:text-4xl lg:text-5xl mb-4">
-            Zorganizuj imprezę w Rabce-Zdrój
+            Zorganizuj imprezę Rabka-Zdrój
           </h2>
           <p className="text-espresso/70 max-w-xl mx-auto leading-relaxed">
             Komunia, chrzciny, urodziny, spotkanie firmowe — dostosujemy salę i menu do każdej okazji.
@@ -523,7 +523,7 @@ function ContactTeaser() {
               <span className="font-mono text-xs tracking-[0.25em] uppercase">Kontakt</span>
             </div>
             <h2 className="font-drama italic text-espresso text-3xl md:text-4xl leading-snug mb-4">
-              Zapraszamy do Sielskiej Chaty w Rabce-Zdrój
+              Zapraszamy do Sielskiej Chaty Rabka-Zdrój
             </h2>
             <p className="text-espresso/70 leading-relaxed mb-8">
               Szukasz dobrego miejsca, gdzie zjeść w Rabce-Zdrój? Zarezerwuj stolik telefonicznie lub wpadnij spontanicznie — prawie zawsze znajdziemy miejsce.

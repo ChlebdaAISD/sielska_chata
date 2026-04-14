@@ -25,15 +25,15 @@ const reviewsSchema = {
 
 const routesMeta = {
   '/': {
-    title: 'Restauracja w Rabce-Zdrój — Sielska Chata | Kuchnia polska',
-    description: 'Sielska Chata w Rabce-Zdrój to najlepsza kuchnia polska i europejska. Szeroka karta dań, imprezy okolicznościowe i jedzenie na wynos. Laureat Orłów Gastronomii.',
+    title: 'Restauracja Rabka-Zdrój — Sielska Chata | Kuchnia polska',
+    description: 'Sielska Chata Rabka-Zdrój to najlepsza kuchnia polska i europejska. Szeroka karta dań, imprezy okolicznościowe i jedzenie na wynos. Laureat Orłów Gastronomii.',
     keywords: 'restauracja Rabka-Zdrój, kuchnia polska, kuchnia europejska, Sielska Chata, obiad Rabka, jedzenie na wynos Rabka, gdzie zjeść Rabka',
     canonical: `${DOMAIN}/`,
     breadcrumb: [],
   },
   '/menu/': {
     title: 'Menu Restauracji — Sielska Chata Rabka-Zdrój',
-    description: 'Odkryj menu Sielskiej Chaty w Rabce-Zdrój. Tradycyjne pierogi, żurek, dania mięsne, świeże ryby i pyszne desery. Sprawdź naszą kartę dań i zamów na wynos.',
+    description: 'Odkryj menu Sielskiej Chaty Rabka-Zdrój. Tradycyjne pierogi, żurek, dania mięsne, świeże ryby i pyszne desery. Sprawdź naszą kartę dań i zamów na wynos.',
     keywords: 'menu Sielska Chata, karta dań, pierogi Rabka, żurek, ryby, desery, jedzenie na wynos Rabka, restauracja menu',
     canonical: `${DOMAIN}/menu/`,
     breadcrumb: [
@@ -73,7 +73,7 @@ const routesMeta = {
   },
   '/opinie/': {
     title: 'Opinie — Sielska Chata | Google 4.6/5, Orły Gastronomii 8.9',
-    description: 'Przeczytaj opinie gości Sielskiej Chaty w Rabce-Zdrój. Ocena 4.6/5 na Google. Laureaci Orłów Gastronomii z oceną 8.9. Zobacz, co o nas piszą i zostaw swoją opinię.',
+    description: 'Przeczytaj opinie gości Sielskiej Chaty Rabka-Zdrój. Ocena 4.6/5 na Google. Laureaci Orłów Gastronomii z oceną 8.9. Zobacz, co o nas piszą i zostaw swoją opinię.',
     keywords: 'opinie Sielska Chata, recenzje restauracja Rabka, polecana restauracja, Google opinie Sielska Chata',
     canonical: `${DOMAIN}/opinie/`,
     breadcrumb: [
