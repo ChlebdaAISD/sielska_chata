@@ -26,13 +26,15 @@ const reviewsSchema = {
 const routesMeta = {
   '/': {
     title: 'Restauracja w Rabce-Zdrój — Sielska Chata | Kuchnia polska',
-    description: 'Sielska Chata — restauracja w Rabce-Zdrój z kuchnią polską i europejską. Szeroka karta dań, imprezy okolicznościowe, jedzenie na wynos. Czynne Pon.–Pt. 12–22, Sob. 12–01, Niedz. 12–22. Laureat Orłów Gastronomii 2026.',
+    description: 'Sielska Chata w Rabce-Zdrój to najlepsza kuchnia polska i europejska. Szeroka karta dań, imprezy okolicznościowe i jedzenie na wynos. Laureat Orłów Gastronomii.',
+    keywords: 'restauracja Rabka-Zdrój, kuchnia polska, kuchnia europejska, Sielska Chata, obiad Rabka, jedzenie na wynos Rabka, gdzie zjeść Rabka',
     canonical: `${DOMAIN}/`,
     breadcrumb: [],
   },
   '/menu/': {
     title: 'Menu Restauracji — Sielska Chata Rabka-Zdrój',
-    description: 'Pełna karta dań Sielskiej Chaty w Rabce-Zdrój. Przystawki, zupy, dania główne, ryby, pierogi, desery i menu dla dzieci. Jedzenie na wynos dostępne Pon.–Pt. 12–22, Sob. 12–01, Niedz. 12–22.',
+    description: 'Odkryj menu Sielskiej Chaty w Rabce-Zdrój. Tradycyjne pierogi, żurek, dania mięsne, świeże ryby i pyszne desery. Sprawdź naszą kartę dań i zamów na wynos.',
+    keywords: 'menu Sielska Chata, karta dań, pierogi Rabka, żurek, ryby, desery, jedzenie na wynos Rabka, restauracja menu',
     canonical: `${DOMAIN}/menu/`,
     breadcrumb: [
       { name: 'Sielska Chata', url: `${DOMAIN}/` },
@@ -41,7 +43,8 @@ const routesMeta = {
   },
   '/imprezy/': {
     title: 'Imprezy Okolicznościowe Rabka-Zdrój — Sielska Chata',
-    description: 'Organizacja komunii, chrzcin, urodzin i bankietów firmowych w Rabce-Zdrój. Klimatyczne wnętrze, kuchnia polska i europejska, bezpłatny parking. Zadzwoń i zarezerwuj termin.',
+    description: 'Planujesz imprezę w Rabce-Zdrój? Organizujemy komunie, chrzciny, urodziny i bankiety firmowe. Klimatyczna sala, wyśmienite jedzenie i profesjonalna obsługa.',
+    keywords: 'imprezy okolicznościowe Rabka, komunie Rabka-Zdrój, chrzciny, urodziny, bankiety, sala na wynajęcie, organizacja imprez',
     canonical: `${DOMAIN}/imprezy/`,
     breadcrumb: [
       { name: 'Sielska Chata', url: `${DOMAIN}/` },
@@ -50,7 +53,8 @@ const routesMeta = {
   },
   '/o-nas/': {
     title: 'O nas — Sielska Chata | Restauracja w centrum Rabki-Zdrój',
-    description: 'Sielska Chata w Rabce-Zdrój — restauracja rodzinna z kuchnią polską i europejską. Laureat Orłów Gastronomii 2026 z oceną 8.9. Ul. Piłsudskiego 18, czynni Pon.–Pt. 12–22, Sob. 12–01, Niedz. 12–22.',
+    description: 'Poznaj historię Sielskiej Chaty — rodzinnej restauracji w sercu Rabki-Zdrój. Dowiedz się więcej o naszej pasji do gotowania i dlaczego warto nas odwiedzić.',
+    keywords: 'o nas Sielska Chata, restauracja rodzinna Rabka, historia restauracji, najlepsza restauracja Rabka, Orły Gastronomii',
     canonical: `${DOMAIN}/o-nas/`,
     breadcrumb: [
       { name: 'Sielska Chata', url: `${DOMAIN}/` },
@@ -59,7 +63,8 @@ const routesMeta = {
   },
   '/kontakt/': {
     title: 'Kontakt i Rezerwacja — Sielska Chata Rabka-Zdrój',
-    description: 'Kontakt z restauracją Sielska Chata w Rabce-Zdrój. Tel: +48 780 285 859. Czynni Pon.–Pt. 12:00–22:00, Sob. 12:00–01:00, Niedz. 12:00–22:00. Ul. Piłsudskiego 18, 34-700 Rabka-Zdrój. Bezpłatny parking.',
+    description: 'Kontakt i rezerwacje w Sielskiej Chacie w Rabce-Zdrój. Znajdź nas przy ul. Piłsudskiego 18. Zadzwoń: +48 780 285 859 i zarezerwuj stolik już dziś.',
+    keywords: 'kontakt Sielska Chata, rezerwacja stolika Rabka, telefon restauracja, adres Sielska Chata, dojazd Rabka-Zdrój',
     canonical: `${DOMAIN}/kontakt/`,
     breadcrumb: [
       { name: 'Sielska Chata', url: `${DOMAIN}/` },
@@ -68,7 +73,8 @@ const routesMeta = {
   },
   '/opinie/': {
     title: 'Opinie — Sielska Chata | Google 4.6/5, Orły Gastronomii 8.9',
-    description: 'Przeczytaj opinie gości Sielskiej Chaty w Rabce-Zdrój. Ocena 4.6/5 na Google (96 opinii). Laureaci Orłów Gastronomii 2026 z oceną 8.9. Zostaw swoją opinię.',
+    description: 'Przeczytaj opinie gości Sielskiej Chaty w Rabce-Zdrój. Ocena 4.6/5 na Google. Laureaci Orłów Gastronomii z oceną 8.9. Zobacz, co o nas piszą i zostaw swoją opinię.',
+    keywords: 'opinie Sielska Chata, recenzje restauracja Rabka, polecana restauracja, Google opinie Sielska Chata',
     canonical: `${DOMAIN}/opinie/`,
     breadcrumb: [
       { name: 'Sielska Chata', url: `${DOMAIN}/` },

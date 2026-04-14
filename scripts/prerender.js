@@ -10,18 +10,26 @@ function updateMetaTags(html, meta) {
   let result = html
 
   // Title
-  result = result.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`)
+  result = result.replace(/<title>[\s\S]*?<\/title>/, `<title>${meta.title}</title>`)
 
-  // Meta description
+  // Meta description - handles newlines and varying whitespace
   result = result.replace(
-    /<meta name="description" content=".*?".*?\/>/,
+    /<meta\s+name="description"\s+content="[\s\S]*?"\s*\/?>/,
     `<meta name="description" content="${meta.description}" />`
   )
 
+  // Meta keywords
+  if (meta.keywords) {
+    result = result.replace(
+      /<meta\s+name="keywords"\s+content="[\s\S]*?"\s*\/?>/,
+      `<meta name="keywords" content="${meta.keywords}" />`
+    )
+  }
+
   // Canonical — handle both noscript-wrapped and plain variants
   const canonicalPatterns = [
-    /<noscript>\s*<link rel="canonical" href=".*?".*?\/>\s*<\/noscript>/,
-    /<link rel="canonical" href=".*?".*?\/>/,
+    /<noscript>\s*<link rel="canonical" href="[\s\S]*?"\s*\/?>\s*<\/noscript>/,
+    /<link rel="canonical" href="[\s\S]*?"\s*\/?>/,
   ]
   let replaced = false
   for (const pattern of canonicalPatterns) {
@@ -36,13 +44,13 @@ function updateMetaTags(html, meta) {
   }
 
   // Open Graph
-  result = result.replace(/<meta property="og:title" content=".*?".*?\/>/, `<meta property="og:title" content="${meta.title}" />`)
-  result = result.replace(/<meta property="og:description" content=".*?".*?\/>/, `<meta property="og:description" content="${meta.description}" />`)
-  result = result.replace(/<meta property="og:url" content=".*?".*?\/>/, `<meta property="og:url" content="${meta.canonical}" />`)
+  result = result.replace(/<meta\s+property="og:title"\s+content="[\s\S]*?"\s*\/?>/, `<meta property="og:title" content="${meta.title}" />`)
+  result = result.replace(/<meta\s+property="og:description"\s+content="[\s\S]*?"\s*\/?>/, `<meta property="og:description" content="${meta.description}" />`)
+  result = result.replace(/<meta\s+property="og:url"\s+content="[\s\S]*?"\s*\/?>/, `<meta property="og:url" content="${meta.canonical}" />`)
 
   // Twitter
-  result = result.replace(/<meta name="twitter:title" content=".*?".*?\/>/, `<meta name="twitter:title" content="${meta.title}" />`)
-  result = result.replace(/<meta name="twitter:description" content=".*?".*?\/>/, `<meta name="twitter:description" content="${meta.description}" />`)
+  result = result.replace(/<meta\s+name="twitter:title"\s+content="[\s\S]*?"\s*\/?>/, `<meta name="twitter:title" content="${meta.title}" />`)
+  result = result.replace(/<meta\s+name="twitter:description"\s+content="[\s\S]*?"\s*\/?>/, `<meta name="twitter:description" content="${meta.description}" />`)
 
   return result
 }
