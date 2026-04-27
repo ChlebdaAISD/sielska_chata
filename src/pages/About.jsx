@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Phone, ArrowRight, Award, Star, ChefHat, Mountain } from 'lucide-react'
 import MountainSilhouette from '../components/MountainSilhouette'
 import Button from '../components/Button'
+import MasonryGallery from '../components/MasonryGallery'
 import { CONTACT } from '../data/contact'
 
 if (typeof window !== 'undefined') {
@@ -131,6 +132,33 @@ export default function About() {
             </p>
             <p className="text-cream/30 text-sm">Sielska Chata, Rabka-Zdrój</p>
           </div>
+        </div>
+      </section>
+
+      {/* Gallery — wnętrze restauracji */}
+      <section className="py-20 md:py-28 px-6 md:px-16 lg:px-24 bg-background">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="parzenica-divider text-terracotta w-fit mb-6">
+            <span className="font-mono text-xs tracking-[0.25em] uppercase">Wnętrze</span>
+          </div>
+          <h2 className="font-heading text-espresso text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter leading-none mb-10 md:mb-14">
+            Zajrzyj do nas<br />
+            <span className="text-terracotta italic font-drama font-normal">— zanim przyjdziesz</span>
+          </h2>
+          <MasonryGallery
+            images={[
+              { src: '/images/restaurant/restaurant-01.webp', alt: 'Drewniane wnętrze restauracji Sielska Chata w Rabce-Zdroju — sala z bali z dębowymi ławami' },
+              { src: '/images/restaurant/restaurant-02.webp', alt: 'Spiralne drewniane schody na piętro restauracji Sielska Chata Rabka-Zdrój' },
+              { src: '/images/restaurant/restaurant-03.webp', alt: 'Restauracja Sielska Chata w Rabce-Zdroju — drewniany budynek przy trasie Kraków–Zakopane' },
+              { src: '/images/restaurant/restaurant-04.webp', alt: 'Sala bankietowa na poddaszu Sielskiej Chaty — drewniane ławy pod skośnym dachem' },
+              { src: '/images/restaurant/restaurant-05.webp', alt: 'Kameralna sala na poddaszu Sielskiej Chaty z widokiem na Rabkę-Zdrój' },
+              { src: '/images/restaurant/restaurant-06.webp', alt: 'Mała sala restauracji Sielska Chata — przytulne wnętrze z drewna' },
+              { src: '/images/restaurant/restaurant-07.webp', alt: 'Sala główna Sielskiej Chaty — bar i dekoracje góralskie w sercu Rabki-Zdroju' },
+              { src: '/images/restaurant/restaurant-08.webp', alt: 'Letni ogródek restauracji Sielska Chata Rabka-Zdrój — taras z widokiem na góry' },
+              { src: '/images/restaurant/restaurant-09.webp', alt: 'Menu Sielskiej Chaty — kuchnia polska i europejska w centrum Rabki-Zdroju' },
+              { src: '/images/restaurant/restaurant-10.webp', alt: 'Bar w Sielskiej Chacie — wnętrze restauracji w stylu góralskim, Rabka-Zdrój' },
+            ]}
+          />
         </div>
       </section>
 

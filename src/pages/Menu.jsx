@@ -176,7 +176,7 @@ export default function Menu() {
         </div>
       </section>
 
-      {/* Dish gallery — placeholder images, client will supply final photos */}
+      {/* Dish gallery */}
       <section className="py-16 md:py-20 px-6 md:px-16 lg:px-24 bg-background">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-10">
@@ -189,11 +189,16 @@ export default function Menu() {
           </div>
           <GalleryLightbox
             images={[
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 1' },
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 2' },
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 3' },
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 4' },
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 5' },
+              { src: '/images/food/food-01.webp', alt: 'Naleśniki z sosem wiśniowym i czekoladą — deser w restauracji Sielska Chata Rabka-Zdrój' },
+              { src: '/images/food/food-02.webp', alt: 'Szaszłyk wieprzowy z opiekanymi ziemniakami — danie z grilla w Sielskiej Chacie' },
+              { src: '/images/food/food-03.webp', alt: 'Deska mieszana — pierogi, kotlety, kaszanka i golonka w Sielskiej Chacie Rabka-Zdrój' },
+              { src: '/images/food/food-04.webp', alt: 'Pierogi ruskie ze skwarkami i koperkiem — kuchnia polska w Sielskiej Chacie' },
+              { src: '/images/food/food-05.webp', alt: 'Pstrąg pieczony z puree ziemniaczanym i sałatą — danie rybne w Sielskiej Chacie Rabka-Zdrój' },
+              { src: '/images/food/food-06.webp', alt: 'Żeberka pieczone w sosie BBQ z opiekanymi ziemniakami — Sielska Chata Rabka-Zdrój' },
+              { src: '/images/food/food-07.webp', alt: 'Gulasz wołowy z fasolką szparagową — sycące danie obiadowe w Sielskiej Chacie' },
+              { src: '/images/food/food-08.webp', alt: 'Golonka pieczona z kapustą zasmażaną i puree — specjalność Sielskiej Chaty Rabka-Zdrój' },
+              { src: '/images/food/food-09.webp', alt: 'Placek po zbójnicku z gulaszem mięsnym — kuchnia podhalańska w Sielskiej Chacie' },
+              { src: '/images/food/food-10.webp', alt: 'Pieczeń z papryką i pieczarkami w sosie — danie w Sielskiej Chacie Rabka-Zdrój' },
             ]}
           />
         </div>
