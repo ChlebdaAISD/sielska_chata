@@ -27,6 +27,7 @@ export default function Footer() {
                 { label: 'Menu', href: '/menu/' },
                 { label: 'O nas', href: '/o-nas/' },
                 { label: 'Imprezy', href: '/imprezy/' },
+                { label: 'Koryto na dowóz', href: '/goralskie-koryto-na-dowoz/' },
                 { label: 'Opinie', href: '/opinie/' },
                 { label: 'Kontakt', href: '/kontakt/' },
               ].map((link) => (

@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Menu from './pages/Menu'
 import Events from './pages/Events'
+import GoralskieKoryto from './pages/GoralskieKoryto'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Reviews from './pages/Reviews'
@@ -30,6 +31,8 @@ function App({ ssrPath }) {
           <Route path="/menu/" component={Menu} />
           <Route path="/imprezy" component={Events} />
           <Route path="/imprezy/" component={Events} />
+          <Route path="/goralskie-koryto-na-dowoz" component={GoralskieKoryto} />
+          <Route path="/goralskie-koryto-na-dowoz/" component={GoralskieKoryto} />
           <Route path="/o-nas" component={About} />
           <Route path="/o-nas/" component={About} />
           <Route path="/kontakt" component={Contact} />

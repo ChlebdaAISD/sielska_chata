@@ -305,9 +305,14 @@ function MenuPreview() {
         )}
 
         <div className="text-center">
-          <Button to="/menu/" variant="primary-dark" icon={<ArrowRight size={14} />}>
-            Zobacz pełne menu
-          </Button>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button to="/menu/" variant="primary-dark" icon={<ArrowRight size={14} />}>
+              Zobacz pełne menu
+            </Button>
+            <Button to="/goralskie-koryto-na-dowoz/" variant="secondary" icon={<ArrowRight size={14} />}>
+              Zamów góralskie koryto
+            </Button>
+          </div>
           <p className="text-espresso/60 text-xs font-mono mt-4">Dostępne również jedzenie na wynos w Rabce-Zdrój</p>
         </div>
       </div>

@@ -24,6 +24,7 @@ export default function Navbar() {
     { label: 'Menu', href: '/menu/' },
     { label: 'O nas', href: '/o-nas/' },
     { label: 'Imprezy', href: '/imprezy/' },
+    { label: 'Koryto', href: '/goralskie-koryto-na-dowoz/' },
     { label: 'Opinie', href: '/opinie/' },
     { label: 'Kontakt', href: '/kontakt/' },
   ]
@@ -36,7 +37,7 @@ export default function Navbar() {
             ? 'bg-warm-white/85 backdrop-blur-xl border border-espresso/8 shadow-[0_8px_32px_-8px_rgba(44,36,24,0.12)] px-4 py-2.5'
             : 'bg-transparent px-6 py-3'
         }`}
-        style={{ width: 'min(92vw, 860px)' }}
+        style={{ width: 'min(94vw, 1080px)' }}
       >
         <Link href="/" className="flex items-center gap-2.5">
           <img
@@ -47,7 +48,7 @@ export default function Navbar() {
             className={`rounded-full object-cover transition-all duration-700 ${scrolled ? 'h-9 w-9' : 'h-11 w-11'}`}
           />
           <span
-            className={`font-drama font-semibold tracking-tight transition-all duration-700 ${
+            className={`font-drama font-semibold tracking-tight whitespace-nowrap transition-all duration-700 ${
               scrolled ? 'text-espresso text-base' : 'text-white text-lg'
             }`}
           >
@@ -55,12 +56,12 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-1">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`link-lift px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 ${
+              className={`link-lift shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 ${
                 scrolled
                   ? 'text-espresso/70 hover:text-espresso hover:bg-espresso/5'
                   : 'text-white/80 hover:text-white hover:bg-white/10'
@@ -76,7 +77,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden p-2 rounded-full"
+          className="lg:hidden p-2 rounded-full"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
           aria-expanded={menuOpen}

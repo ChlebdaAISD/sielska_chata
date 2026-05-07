@@ -51,6 +51,16 @@ const routesMeta = {
       { name: 'Imprezy', url: `${DOMAIN}/imprezy/` },
     ],
   },
+  '/goralskie-koryto-na-dowoz/': {
+    title: 'Góralskie Koryto na Dowóz Rabka-Zdrój — Sielska Chata',
+    description: 'Zamów góralskie koryto z dowozem w Rabce-Zdrój i okolicach. Golonka, kaszanka, schabowy, kiełbasa, pierogi, ziemniaki, kapusta zasmażana. Cena od 50 zł / os.',
+    keywords: 'góralskie koryto, koryto na dowóz, catering Rabka-Zdrój, koryto góralskie cena, dowóz jedzenia Rabka, koryto firmowe',
+    canonical: `${DOMAIN}/goralskie-koryto-na-dowoz/`,
+    breadcrumb: [
+      { name: 'Sielska Chata', url: `${DOMAIN}/` },
+      { name: 'Góralskie Koryto na Dowóz', url: `${DOMAIN}/goralskie-koryto-na-dowoz/` },
+    ],
+  },
   '/o-nas/': {
     title: 'O nas — Sielska Chata | Restauracja w centrum Rabki-Zdrój',
     description: 'Poznaj historię Sielskiej Chaty — rodzinnej restauracji w sercu Rabki-Zdrój. Dowiedz się więcej o naszej pasji do gotowania i dlaczego warto nas odwiedzić.',

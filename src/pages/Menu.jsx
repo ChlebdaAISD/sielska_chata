@@ -176,7 +176,7 @@ export default function Menu() {
         </div>
       </section>
 
-      {/* Dish gallery — placeholder images, client will supply final photos */}
+      {/* Dish gallery */}
       <section className="py-16 md:py-20 px-6 md:px-16 lg:px-24 bg-background">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-10">
@@ -189,13 +189,46 @@ export default function Menu() {
           </div>
           <GalleryLightbox
             images={[
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 1' },
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 2' },
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 3' },
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 4' },
-              { src: '/images/hero.webp', alt: 'Danie restauracji Sielska Chata 5' },
+              { src: '/images/food/food-01.webp', alt: 'Naleśniki z sosem wiśniowym i czekoladą — deser w restauracji Sielska Chata Rabka-Zdrój' },
+              { src: '/images/food/food-02.webp', alt: 'Szaszłyk wieprzowy z opiekanymi ziemniakami — danie z grilla w Sielskiej Chacie' },
+              { src: '/images/food/food-03.webp', alt: 'Deska mieszana — pierogi, kotlety, kaszanka i golonka w Sielskiej Chacie Rabka-Zdrój' },
+              { src: '/images/food/food-04.webp', alt: 'Pierogi ruskie ze skwarkami i koperkiem — kuchnia polska w Sielskiej Chacie' },
+              { src: '/images/food/food-05.webp', alt: 'Pstrąg pieczony z puree ziemniaczanym i sałatą — danie rybne w Sielskiej Chacie Rabka-Zdrój' },
+              { src: '/images/food/food-06.webp', alt: 'Żeberka pieczone w sosie BBQ z opiekanymi ziemniakami — Sielska Chata Rabka-Zdrój' },
+              { src: '/images/food/food-07.webp', alt: 'Gulasz wołowy z fasolką szparagową — sycące danie obiadowe w Sielskiej Chacie' },
+              { src: '/images/food/food-08.webp', alt: 'Golonka pieczona z kapustą zasmażaną i puree — specjalność Sielskiej Chaty Rabka-Zdrój' },
+              { src: '/images/food/food-09.webp', alt: 'Placek po zbójnicku z gulaszem mięsnym — kuchnia podhalańska w Sielskiej Chacie' },
+              { src: '/images/food/food-10.webp', alt: 'Pieczeń z papryką i pieczarkami w sosie — danie w Sielskiej Chacie Rabka-Zdrój' },
             ]}
           />
+        </div>
+      </section>
+
+      {/* Koryto na dowóz — promo */}
+      <section className="py-20 px-6 md:px-16 lg:px-24 bg-warm-white border-t border-espresso/5">
+        <div className="max-w-[900px] mx-auto">
+          <div className="bg-background border border-espresso/8 rounded-[2rem] px-8 py-10 md:px-12 md:py-12 flex flex-col md:flex-row items-center gap-8">
+            <img
+              src="/images/food/food-03.webp"
+              alt="Góralskie koryto z mięsami i pierogami — Sielska Chata Rabka-Zdrój"
+              width={400}
+              height={300}
+              loading="lazy"
+              className="w-full md:w-56 h-44 object-cover rounded-[1.25rem] flex-shrink-0"
+            />
+            <div className="flex-1 text-center md:text-left">
+              <p className="font-mono text-xs text-terracotta tracking-[0.25em] uppercase mb-3">Nowość · Dowóz</p>
+              <h2 className="font-drama italic text-espresso text-2xl md:text-3xl mb-3 leading-tight">
+                Góralskie koryto na dowóz
+              </h2>
+              <p className="text-espresso/65 text-sm leading-relaxed mb-6">
+                Tradycyjna porcja mięs, pierogów i dodatków dla całej grupy — z dowozem w Rabce-Zdrój i okolicach. Cena od 50 zł / os.
+              </p>
+              <Button to="/goralskie-koryto-na-dowoz/" variant="primary-dark" size="sm" icon={<ArrowRight size={14} />}>
+                Sprawdź szczegóły
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
