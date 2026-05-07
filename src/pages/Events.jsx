@@ -65,6 +65,43 @@ const eventTypes = [
   },
 ]
 
+const sampleMenu = [
+  {
+    category: 'Zupy',
+    items: [
+      'Rosół z makaronem',
+      'Pomidorowe cappuccino',
+      'Żurek z jajkiem',
+      'Grzybowa na kwasie z kiszonej kapusty',
+      'Krem kalafiorowo-brokułowy z prażonymi migdałami',
+    ],
+  },
+  {
+    category: 'Danie główne',
+    items: [
+      'Kotlet schabowy, devolay, złociste pasemka z piersi kurczaka',
+      'Zapiekana pierś z kurczaka z oscypkiem i żurawiną',
+      'Pieczeń wieprzowa z cebulką i orzechami w sosie miodowo-musztardowym',
+      'Pieczona karkówka z czosnkiem w sosie piwnym',
+      'Schab pieczony z włoską kapustą i wędzonym boczkiem',
+    ],
+  },
+  {
+    category: 'Danie ciepłe',
+    items: ['Barszcz z krokietem', 'Flaczki', 'Bigos', 'Gulasz z kluseczkami', 'Żurek'],
+  },
+  {
+    category: 'Dodatki',
+    items: ['Ziemniaki purée', 'Ziemniaki pieczone', 'Sielski knedel', 'Kapusta zasmażana'],
+  },
+  {
+    category: 'Surówki',
+    items: ['Z marchwi i pora', 'Z kapusty białej', 'Z kapusty czerwonej', 'Buraczki z jabłkiem'],
+  },
+]
+
+const includedItems = ['Ciasto', 'Woda', 'Sok', 'Kawa', 'Herbata']
+
 function EventCard({ event, index }) {
   const ref = useRef(null)
 
@@ -200,6 +237,48 @@ export default function Events() {
           {eventTypes.map((event, i) => (
             <EventCard key={event.id} event={event} index={i} />
           ))}
+        </div>
+      </section>
+
+      {/* Sample menu */}
+      <section className="py-24 md:py-32 px-6 md:px-16 lg:px-24 bg-background border-t border-espresso/8">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center mb-14">
+            <div className="parzenica-divider text-terracotta mx-auto w-fit mb-6">
+              <span className="font-mono text-xs tracking-[0.25em] uppercase">Przykładowe menu</span>
+            </div>
+            <h2 className="font-drama italic text-espresso text-3xl md:text-4xl mb-4">
+              Co serwujemy na imprezach
+            </h2>
+            <p className="text-espresso/55 max-w-xl mx-auto leading-relaxed">
+              Menu dopasowujemy do grupy i okazji. Poniżej przykład pełnej karty z 2026 — szczegóły i wycena po kontakcie telefonicznym.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
+            {sampleMenu.map((section) => (
+              <div key={section.category}>
+                <h3 className="font-heading font-bold text-espresso text-lg mb-4 tracking-tight uppercase">
+                  {section.category}
+                </h3>
+                <ul className="space-y-2">
+                  {section.items.map((item) => (
+                    <li
+                      key={item}
+                      className="text-sm text-espresso/70 leading-relaxed border-b border-espresso/5 pb-2"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-warm-white border border-espresso/8 rounded-[1.5rem] px-7 py-6 max-w-xl mx-auto text-center">
+            <p className="font-mono text-xs text-terracotta tracking-widest uppercase mb-2">W cenie</p>
+            <p className="text-espresso/70 text-sm">{includedItems.join(' · ')}</p>
+          </div>
         </div>
       </section>
 

@@ -24,6 +24,7 @@ export default function Navbar() {
     { label: 'Menu', href: '/menu/' },
     { label: 'O nas', href: '/o-nas/' },
     { label: 'Imprezy', href: '/imprezy/' },
+    { label: 'Koryto', href: '/goralskie-koryto-na-dowoz/' },
     { label: 'Opinie', href: '/opinie/' },
     { label: 'Kontakt', href: '/kontakt/' },
   ]
