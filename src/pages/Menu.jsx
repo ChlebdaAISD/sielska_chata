@@ -204,6 +204,34 @@ export default function Menu() {
         </div>
       </section>
 
+      {/* Koryto na dowóz — promo */}
+      <section className="py-20 px-6 md:px-16 lg:px-24 bg-warm-white border-t border-espresso/5">
+        <div className="max-w-[900px] mx-auto">
+          <div className="bg-background border border-espresso/8 rounded-[2rem] px-8 py-10 md:px-12 md:py-12 flex flex-col md:flex-row items-center gap-8">
+            <img
+              src="/images/food/food-03.webp"
+              alt="Góralskie koryto z mięsami i pierogami — Sielska Chata Rabka-Zdrój"
+              width={400}
+              height={300}
+              loading="lazy"
+              className="w-full md:w-56 h-44 object-cover rounded-[1.25rem] flex-shrink-0"
+            />
+            <div className="flex-1 text-center md:text-left">
+              <p className="font-mono text-xs text-terracotta tracking-[0.25em] uppercase mb-3">Nowość · Dowóz</p>
+              <h2 className="font-drama italic text-espresso text-2xl md:text-3xl mb-3 leading-tight">
+                Góralskie koryto na dowóz
+              </h2>
+              <p className="text-espresso/65 text-sm leading-relaxed mb-6">
+                Tradycyjna porcja mięs, pierogów i dodatków dla całej grupy — z dowozem w Rabce-Zdrój i okolicach. Cena od 50 zł / os.
+              </p>
+              <Button to="/goralskie-koryto-na-dowoz/" variant="primary-dark" size="sm" icon={<ArrowRight size={14} />}>
+                Sprawdź szczegóły
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Takeout CTA */}
       <section className="py-20 px-6 md:px-16 lg:px-24 bg-background">
         <div className="max-w-[900px] mx-auto text-center">
