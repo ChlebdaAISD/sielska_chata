@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 zdjecia_menu
 teksty
+
+# Cloudflare
+.wrangler
+.dev.vars
+.dev.vars.*
