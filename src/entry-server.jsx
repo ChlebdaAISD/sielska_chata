@@ -9,6 +9,22 @@ const reviewsSchema = {
   '@type': 'Restaurant',
   name: 'Sielska Chata',
   url: DOMAIN,
+  telephone: '+48780285859',
+  priceRange: '$$',
+  servesCuisine: ['Polish', 'European'],
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'ul. Piłsudskiego 18',
+    addressLocality: 'Rabka-Zdrój',
+    postalCode: '34-700',
+    addressCountry: 'PL',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 49.6058,
+    longitude: 19.9611,
+  },
+  image: [`${DOMAIN}/images/hero.webp`],
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.6',

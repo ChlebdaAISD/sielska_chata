@@ -15,11 +15,29 @@ const korytoItems = [
 
 const productSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Product',
+  '@type': 'Service',
+  serviceType: 'Catering',
   name: 'Góralskie Koryto na Dowóz',
   description: 'Tradycyjne góralskie koryto z mięsami, pierogami i dodatkami — z dowozem w Rabce-Zdrój i okolicach. Golonka, kaszanka, schabowy, kiełbasa, pierogi, ziemniaki, kapusta zasmażana.',
   image: 'https://www.sielskachatarabka.pl/images/food/food-03.webp',
-  brand: { '@type': 'Brand', name: 'Sielska Chata' },
+  url: 'https://www.sielskachatarabka.pl/goralskie-koryto-na-dowoz/',
+  provider: {
+    '@type': 'Restaurant',
+    name: 'Sielska Chata',
+    url: 'https://www.sielskachatarabka.pl',
+    telephone: '+48780285859',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'ul. Piłsudskiego 18',
+      addressLocality: 'Rabka-Zdrój',
+      postalCode: '34-700',
+      addressCountry: 'PL',
+    },
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Rabka-Zdrój' },
+    { '@type': 'AdministrativeArea', name: 'Powiat nowotarski' },
+  ],
   offers: {
     '@type': 'Offer',
     price: '50',
@@ -31,7 +49,6 @@ const productSchema = {
       referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'osoba' },
     },
     availability: 'https://schema.org/InStock',
-    seller: { '@type': 'Restaurant', name: 'Sielska Chata' },
   },
 }
 
