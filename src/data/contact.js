@@ -24,12 +24,13 @@ export const CONTACT = {
 
   hours: {
     /** Full display string */
-    display: 'Pon.–Pt. 12:00–22:00, Sob. 12:00–01:00, Niedz. 12:00–22:00',
+    display: 'Pon.–Czw. 12:00–20:00, Pt. i Niedz. 12:00–22:00, Sob. 12:00–01:00',
     /** Short version for compact UI */
-    short: '12:00–22:00 / 01:00',
+    short: 'od 12:00',
     /** Detailed schedule for list views */
     schedule: [
-      { days: 'Poniedziałek – Piątek', time: '12:00 – 22:00' },
+      { days: 'Poniedziałek – Czwartek', time: '12:00 – 20:00' },
+      { days: 'Piątek', time: '12:00 – 22:00' },
       { days: 'Sobota', time: '12:00 – 01:00' },
       { days: 'Niedziela', time: '12:00 – 22:00' },
     ],

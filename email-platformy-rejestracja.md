@@ -21,7 +21,7 @@ Nazwa:    Sielska Chata
 Adres:    ul. Piłsudskiego 18, 34-700 Rabka-Zdrój
 Telefon:  +48 780 285 859
 Strona:   https://sielskachata.pl
-Godziny:  Pon–Pt 12:00–22:00 | Sob 12:00–01:00 | Niedz 12:00–22:00
+Godziny:  Pon–Czw 12:00–20:00 | Pt 12:00–22:00 | Sob 12:00–01:00 | Niedz 12:00–22:00
 Kategoria: Polish Restaurant, European Restaurant
 ```
 
